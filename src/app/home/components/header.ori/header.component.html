@@ -1,0 +1,46 @@
+<nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
+  <!--[if lt IE 10]>
+  <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a
+    href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+  <!-- if main content is using fixed container, enable below container for nav -->
+  <!--<div class="container">-->
+
+    <!-- Brand Logo and toggler-->
+    <button (click)="isCollapsed = !isCollapsed" class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="#">
+      <i class="fa orange-icon">
+        <img src="../../../assets/img/grails-cupsonly-logo-white.svg" alt="Orange$" />
+      </i>
+      {{title}}
+    </a>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" [ngbCollapse]="isCollapsed">
+
+      <div class="navbar-nav mr-auto">
+        <a class="nav-item nav-link" routerLinkActive="active" routerLink="/home"  [routerLinkActiveOptions]="{ exact: true }" i18n>Home</a>
+        <a class="nav-item nav-link" routerLinkActive="active" routerLink="/home/blog" i18n>Blog</a>
+      </div>
+
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" routerLinkActive="active" routerLink="/home/about" i18n>About</a>
+
+        <div ngbDropdown class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" ngbDropdownToggle>Profile</a>
+          <div class="dropdown-menu dropdown-menu-right" >
+            <a class="dropdown-item" (click)="openLogin()">Sign in</a>
+            <a class="dropdown-item" (click)="openSignup()">Sign up</a>
+            <a class="dropdown-item" (click)="logOut()">Sign out</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  <!--</div>-->
+
+</nav>

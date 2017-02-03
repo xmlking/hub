@@ -1,0 +1,317 @@
+<!--Navbar-->
+<nav id="topNav" class="navbar navbar-toggleable-md navbar-inverse fixed-top  scrolling-navbar">
+  <div class="navbar-header">
+    <button (click)="isCollapsed = !isCollapsed" class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" pageScroll href="#first"><i class="fa fa-bicycle"></i> Landing Zero</a>
+  </div>
+
+  <div id="bs-navbar" class="collapse navbar-collapse" [ngbCollapse]="isCollapsed">
+    <div class="navbar-nav mr-auto">
+      <a class="nav-item nav-link" pageScroll  [pageScrollInterruptible]="false" href="#one">Intro</a>
+      <a class="nav-item nav-link" pageScroll href="#two">Highlights</a>
+      <a class="nav-item nav-link" pageScroll href="#three">Gallery</a>
+      <a class="nav-item nav-link" pageScroll href="#four">Features</a>
+      <a class="nav-item nav-link" pageScroll href="#last">Contact</a>
+    </div>
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" pageScroll href="#aboutModal">About</a>
+    </div>
+  </div>
+</nav>
+<!--/.Navbar-->
+
+
+<!--Mask-->
+<div class="view hm-black-strong">
+  <div class="full-bg-img flex-center">
+    <ul>
+      <li>
+        <h1 class="h1-responsive wow fadeInDown" data-wow-delay="0.2s">Material Design for Bootstrap 4</h1></li>
+      <li>
+        <p class="wow fadeInDown">The most powerful and free UI KIT for Bootstrap</p>
+      </li>
+      <li>
+        <a target="_blank" href="https://mdbootstrap.com/getting-started/" class="btn btn-primary btn-lg wow fadeInLeft" data-wow-delay="0.2s">Sign up!</a>
+        <a target="_blank" href="https://mdbootstrap.com/material-design-for-bootstrap/" class="btn btn-default btn-lg wow fadeInRight" data-wow-delay="0.2s">Learn more</a>
+      </li>
+    </ul>
+  </div>
+</div>
+<!--/.Mask-->
+
+<!-- Main container-->
+<div class="container">
+
+  <div class="divider-new">
+    <h2 class="h2-responsive wow bounceIn">About us</h2>
+  </div>
+
+  <!--Section: About-->
+  <section id="about" class="text-xs-center wow bounceIn" data-wow-delay="0.2s">
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit explicabo assumenda eligendi ex exercitationem harum deleniti quaerat beatae ducimus dolor voluptates magnam, reiciendis pariatur culpa tempore quibusdam quidem, saepe eius.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit explicabo assumenda eligendi ex exercitationem harum deleniti quaerat beatae ducimus dolor voluptates magnam, reiciendis pariatur culpa tempore quibusdam quidem, saepe eius.</p>
+
+  </section>
+  <!--Section: About-->
+
+  <div class="divider-new">
+    <h2 class="h2-responsive wow fadeInDown">Best features</h2>
+  </div>
+
+  <!--Section: Best features-->
+  <section id="best-features">
+
+    <div class="row">
+
+      <!--First columnn-->
+      <div class="col-md-3">
+        <!--Card-->
+        <div class="card wow fadeInUp">
+
+          <!--Card image-->
+          <div class="view overlay hm-white-slight">
+            <img src="https://mdbootstrap.com/images/regular/city/img%20(2).jpg" class="img-fluid" alt="">
+            <a>
+              <div class="mask"></div>
+            </a>
+          </div>
+          <!--/.Card image-->
+
+          <!--Card content-->
+          <div class="card-block text-xs-center">
+            <!--Title-->
+            <h4 class="card-title">Card title</h4>
+            <hr>
+            <!--Text-->
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident fuga animi architecto dolores dicta cum quo velit.</p>
+          </div>
+          <!--/.Card content-->
+
+        </div>
+        <!--/.Card-->
+      </div>
+      <!--First columnn-->
+
+      <!--Second columnn-->
+      <div class="col-md-3">
+        <!--Card-->
+        <div class="card wow fadeInUp" data-wow-delay="0.2s">
+
+          <!--Card image-->
+          <div class="view overlay hm-white-slight">
+            <img src="https://mdbootstrap.com/images/regular/city/img%20(3).jpg" class="img-fluid" alt="">
+            <a>
+              <div class="mask"></div>
+            </a>
+          </div>
+          <!--/.Card image-->
+
+          <!--Card content-->
+          <div class="card-block text-xs-center">
+            <!--Title-->
+            <h4 class="card-title">Card title</h4>
+            <hr>
+            <!--Text-->
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident fuga animi architecto dolores dicta cum quo velit.</p>
+          </div>
+          <!--/.Card content-->
+
+        </div>
+        <!--/.Card-->
+      </div>
+      <!--Second columnn-->
+
+      <!--Third columnn-->
+      <div class="col-md-3">
+        <!--Card-->
+        <div class="card wow fadeInUp" data-wow-delay="0.4s">
+
+          <!--Card image-->
+          <div class="view overlay hm-white-slight">
+            <img src="https://mdbootstrap.com/images/regular/city/img%20(4).jpg" class="img-fluid" alt="">
+            <a>
+              <div class="mask"></div>
+            </a>
+          </div>
+          <!--/.Card image-->
+
+          <!--Card content-->
+          <div class="card-block text-xs-center">
+            <!--Title-->
+            <h4 class="card-title">Card title</h4>
+            <hr>
+            <!--Text-->
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident fuga animi architecto dolores dicta cum quo velit.</p>
+          </div>
+          <!--/.Card content-->
+
+        </div>
+        <!--/.Card-->
+      </div>
+      <!--Third columnn-->
+
+      <!--Fourth columnn-->
+      <div class="col-md-3">
+        <!--Card-->
+        <div class="card wow fadeInUp" data-wow-delay="0.6s">
+
+          <!--Card image-->
+          <div class="view overlay hm-white-slight">
+            <img src="https://mdbootstrap.com/images/regular/city/img%20(8).jpg" class="img-fluid" alt="">
+            <a>
+              <div class="mask"></div>
+            </a>
+          </div>
+          <!--/.Card image-->
+
+          <!--Card content-->
+          <div class="card-block text-xs-center">
+            <!--Title-->
+            <h4 class="card-title">Card title</h4>
+            <hr>
+            <!--Text-->
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident fuga animi architecto dolores dicta cum quo velit.</p>
+          </div>
+          <!--/.Card content-->
+
+        </div>
+        <!--/.Card-->
+      </div>
+      <!--Fourth columnn-->
+    </div>
+
+  </section>
+  <!--/Section: Best features-->
+
+  <div class="divider-new">
+    <h2 class="h2-responsive wow fadeInUp">Contact us</h2>
+  </div>
+
+  <!--Section: Contact-->
+  <section id="contact">
+    <div class="row">
+      <!--First column-->
+      <div class="col-md-8">
+        <div id="map-container" class="z-depth-1 wow fadeInUp" style="height: 300px"></div>
+      </div>
+      <!--/First column-->
+
+      <!--Second column-->
+      <div class="col-md-4">
+        <ul class="text-xs-center">
+          <li class="wow fadeInUp" data-wow-delay="0.2s"><i class="fa fa-map-marker"></i>
+            <p>New York, NY 10012, USA</p>
+          </li>
+
+          <li class="wow fadeInUp" data-wow-delay="0.3s"><i class="fa fa-phone"></i>
+            <p>+ 01 234 567 89</p>
+          </li>
+
+          <li class="wow fadeInUp" data-wow-delay="0.4s"><i class="fa fa-envelope"></i>
+            <p>contact@mdbootstrap.com</p>
+          </li>
+        </ul>
+      </div>
+      <!--/Second column-->
+    </div>
+  </section>
+  <!--Section: Contact-->
+
+</div>
+<!--/ Main container-->
+
+
+
+<!--Footer-->
+<footer class="page-footer center-on-small-only mdb-color darken-4">
+
+  <!--Footer Links-->
+  <div class="container-fluid">
+    <div class="row">
+
+      <!--First column-->
+      <div class="col-md-3 offset-md-1">
+        <h5 class="title">ABOUT MATERIAL DESIGN</h5>
+        <p>Material Design (codenamed Quantum Paper) is a design language developed by Google. </p>
+
+        <p>Material Design for Bootstrap (MDB) is a powerful Material Design UI KIT for most popular HTML, CSS, and JS framework - Bootstrap.</p>
+      </div>
+      <!--/.First column-->
+
+      <hr class="hidden-md-up">
+
+      <!--Second column-->
+      <div class="col-md-2 offset-md-1">
+        <h5 class="title">First column</h5>
+        <ul>
+          <li><a href="#!">Link 1</a></li>
+          <li><a href="#!">Link 2</a></li>
+          <li><a href="#!">Link 3</a></li>
+          <li><a href="#!">Link 4</a></li>
+        </ul>
+      </div>
+      <!--/.Second column-->
+
+      <hr class="hidden-md-up">
+
+      <!--Third column-->
+      <div class="col-md-2">
+        <h5 class="title">Second column</h5>
+        <ul>
+          <li><a href="#!">Link 1</a></li>
+          <li><a href="#!">Link 2</a></li>
+          <li><a href="#!">Link 3</a></li>
+          <li><a href="#!">Link 4</a></li>
+        </ul>
+      </div>
+      <!--/.Third column-->
+
+      <hr class="hidden-md-up">
+
+      <!--Fourth column-->
+      <div class="col-md-2">
+        <h5 class="title">Third column</h5>
+        <ul>
+          <li><a href="#!">Link 1</a></li>
+          <li><a href="#!">Link 2</a></li>
+          <li><a href="#!">Link 3</a></li>
+          <li><a href="#!">Link 4</a></li>
+        </ul>
+      </div>
+      <!--/.Fourth column-->
+
+    </div>
+  </div>
+  <!--/.Footer Links-->
+
+  <hr>
+
+  <!--Call to action-->
+  <div class="call-to-action">
+    <h4>Material Design for Bootstrap</h4>
+    <ul>
+      <li>
+        <h5>Get our UI KIT for free</h5></li>
+      <li><a target="_blank" href="https://mdbootstrap.com/getting-started/" class="btn btn-danger">Sign up!</a></li>
+      <li><a target="_blank" href="https://mdbootstrap.com/material-design-for-bootstrap/" class="btn btn-default">Learn more</a></li>
+    </ul>
+  </div>
+  <!--/.Call to action-->
+
+  <!--Copyright-->
+  <div class="footer-copyright">
+    <div class="container-fluid">
+      © 2015 Copyright: <a href="https://mdbootstrap.com"> MDBootstrap.com </a>
+
+    </div>
+  </div>
+  <!--/.Copyright-->
+
+</footer>
+<!--/.Footer-->
+
+
+

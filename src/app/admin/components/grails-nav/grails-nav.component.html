@@ -1,0 +1,32 @@
+<div class="navbar-nav">
+  <li class="nav-item" ngbDropdown>
+    <a class="nav-link dropdown-toggle" ngbDropdownToggle>Application Status</a>
+    <div class="dropdown-menu">
+      <a class="dropdown-item">Environment: {{applicationData?.environment}}</a>
+      <a class="dropdown-item">App profile: {{applicationData?.appprofile}}</a>
+      <a class="dropdown-item">App version: {{applicationData?.appversion}}</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item">Grails version: {{applicationData?.grailsversion}}</a>
+      <a class="dropdown-item">Groovy version: {{applicationData?.groovyversion}}</a>
+      <a class="dropdown-item">JVM version: {{applicationData?.jvmversion}}</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item">Reloading active: {{applicationData?.reloadingagentenabled}}</a>
+    </div>
+  </li>
+  <li class="nav-item" ngbDropdown>
+    <a class="dropdown-toggle nav-link" ngbDropdownToggle>Artefacts</a>
+    <div class="dropdown-menu">
+      <a class="dropdown-item">Controllers: {{applicationData?.artefacts?.controllers}}</a>
+      <a class="dropdown-item">Domains: {{applicationData?.artefacts?.domains}}</a>
+      <a class="dropdown-item">Services: {{applicationData?.artefacts?.services}}</a>
+    </div>
+  </li>
+
+  <li class="nav-item" ngbDropdown>
+    <a class="dropdown-toggle nav-link" ngbDropdownToggle>Installed Plugins</a>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" *ngFor="let plugin of applicationData?.plugins">{{plugin.name}} -
+        {{plugin.version}}</a>
+    </div>
+  </li>
+</div>

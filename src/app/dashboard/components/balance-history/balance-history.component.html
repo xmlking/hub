@@ -1,0 +1,24 @@
+<div class="card card-outline-secondary">
+  <div class="card-block">
+    <h4 class="card-title">Balance History</h4>
+    <p class="card-text">This is your balance history, Keep updating your records and get more Orange Dollars</p>
+  </div>
+  <table class="table table-striped">
+    <thead class="thead-inverse">
+    <tr>
+      <th>#</th>
+      <th>Balance</th>
+      <th>Event</th>
+      <th>Date</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let balance of balanceHistory; let i = index">
+      <td>{{i}}</td>
+      <td>{{balance.balance}}</td>
+      <td>{{balance.action}}</td>
+      <td>{{balance.lastUpdated | amTimeAgo}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

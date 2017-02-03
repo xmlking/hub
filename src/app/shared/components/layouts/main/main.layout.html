@@ -1,0 +1,7 @@
+<ng-content select="header"></ng-content>
+<ng-content></ng-content>
+<span #ref><ng-content select="[app-footer]"></ng-content></span>
+<footer *ngIf="ref.childNodes.length == 0" app-header></footer>
+
+
+http://stackoverflow.com/questions/38780436/how-to-switch-layouts-in-angular2/38783451#38783451

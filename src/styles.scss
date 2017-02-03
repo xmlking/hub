@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+@import "assets/scss/variables";
+@import '../node_modules/bootstrap/scss/bootstrap';
+@import '../node_modules/font-awesome/scss/font-awesome';
+
+
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding for Sticky header and footer            */
+body {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  color: #5a5a5a;
+}

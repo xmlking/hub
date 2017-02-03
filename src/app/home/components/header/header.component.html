@@ -1,0 +1,21 @@
+<nav id="topNav" class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
+    <div class="navbar-header">
+      <button (click)="isCollapsed = !isCollapsed" class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" pageScroll href="#first"><i class="fa fa-bicycle"></i> Landing Zero</a>
+    </div>
+
+    <div id="bs-navbar" class="collapse navbar-collapse" [ngbCollapse]="isCollapsed">
+      <div class="navbar-nav mr-auto">
+        <a class="nav-item nav-link" pageScroll  [pageScrollInterruptible]="false" href="#one">Intro</a>
+        <a class="nav-item nav-link" pageScroll href="#two">Highlights</a>
+        <a class="nav-item nav-link" pageScroll href="#three">Gallery</a>
+        <a class="nav-item nav-link" pageScroll href="#four">Features</a>
+        <a class="nav-item nav-link" pageScroll href="#last">Contact</a>
+      </div>
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" pageScroll href="#aboutModal">About</a>
+      </div>
+    </div>
+</nav>

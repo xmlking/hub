@@ -1,0 +1,26 @@
+<div class="card card-outline-secondary">
+  <div class="card-block">
+    <h4 class="card-title">Leader Board</h4>
+    <p class="card-text">Compare your score with family and friends</p>
+  </div>
+  <table class="table table-striped">
+    <thead class="thead-inverse">
+    <tr>
+      <th>#</th>
+      <th>Orange$</th>
+      <th>Steps</th>
+      <th>Visits</th>
+      <th>BMI</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let record of leaderBoard; let i = index">
+      <td>{{i}}</td>
+      <td>{{record.balance}}</td>
+      <td>{{record.steps}}</td>
+      <td>{{record.visits}}</td>
+      <td>{{record.bmi}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
