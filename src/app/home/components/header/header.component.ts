@@ -6,15 +6,17 @@ import {AppState} from '../../../app.reducers';
 import {LoginComponent} from '../../../auth/login/login.component';
 import {SignupComponent} from '../../../auth/signup/signup.component';
 
+import {environment} from '../../../../environments/environment';
+
 @Component({
-  selector: 'header[app-home-header]',
+  selector: 'app-home-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 
 })
 export class HeaderComponent implements OnInit {
 
-  title = 'Hub';
+  title = environment.TITLE;
   isCollapsed: boolean;
 
   constructor(public router: Router, private store: Store<AppState>, private modalActions: ModalActions) {}
@@ -23,24 +25,18 @@ export class HeaderComponent implements OnInit {
     this.isCollapsed = true;
   }
 
-  public collapsed(event: any): void {
-  }
-
-  public expanded(event: any): void {
-  }
-
   openLogin() {
+    this.collapseNav();
     this.store.dispatch(this.modalActions.open({cmpType: LoginComponent}));
   }
 
   openSignup() {
+    this.collapseNav();
     this.store.dispatch(this.modalActions.open({cmpType: SignupComponent}));
   }
 
-  logOut() {
-    // this.store.dispatch(this.authActions.logout());
-    localStorage.removeItem('id_token');
-    this.router.navigate(['/']);
+/* TODO : always close responsive nav after click : make it nice*/
+  collapseNav() {
+    this.isCollapsed = true;
   }
-
 }

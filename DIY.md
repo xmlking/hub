@@ -4,8 +4,8 @@ Do-it-yourself guide to setup new Angular app.
 
 ### Install Prerequisites
 ```bash
-# install Node (> 7.4.0) with NVM
-nvm install node 7.4.0
+# install Node (> 7.5.0) with NVM
+nvm install node 7.5.0
 
 # install yarn a better package manager then NPM
 brew update
@@ -13,12 +13,15 @@ brew install yarn
 
 # install typescript
 yarn global add typescript
-yarn global add angular-cli@latest
+yarn global add  @angular/cli
+ng set --global packageManager=yarn
 
-# check/debug 
+
+# check/maintain 
 yarn --version
 yarn global ls
 yarn global bin
+yarn global upgrade
 yarn help cache
 yarn cache ls
 yarn cache dir
@@ -28,8 +31,8 @@ yarn cache clean
 ### Project Scaffolding (Optional)
 > these steps below are for setting up a new project from the scratch.
 ```bash
-# create a new angular project `orange`s
-ng new hub  --routing=true --style=scss --skip-npm
+# create a new angular project `hub`
+ng new hub  --ng4 --routing=true --style=scss --skip-install
 cd hub
 yarn
 ```
@@ -49,9 +52,8 @@ yarn add hooked-web3-provider
 yarn add ipfs-api
 yarn add uport-lib
 
-# check
-npm list --depth=0
-npm outdated
+# check/maintain
+yarn outdated
 ```
 
 #### Artifact Scaffolding
@@ -138,3 +140,6 @@ http://asktoanswer.com/questions/how-to-use-wow-js-in-angular-2-webpack/
  npm install wow.js
  https://github.com/timmyg/mary-tim-wedding-webapp
  https://github.com/tinesoft/ng2-scrollreveal
+ parallax
+ https://github.com/ng2-ui/ng2-parallax-scroll
+scroll spy ecample https://github.com/dshybeka/buildka

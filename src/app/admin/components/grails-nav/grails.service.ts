@@ -15,7 +15,7 @@ export class GrailsService {
   getGrailsNavData(): Observable<any> {
     if (!this._navData) {
       this._navData = this.http.get(`${environment.API_BASE_URL}/application`)
-          .map((res: Response) => res.json())
+          .map((res: Response) => res.json());
     }
     return this._navData;
   }

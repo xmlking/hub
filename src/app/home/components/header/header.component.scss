@@ -10,19 +10,105 @@
 
 /* NavBar
 -------------------------------------------------- */
-.orange-icon img {
-  height: 27px;
+
+.navbar {
+  border-color: rgba(35, 35, 35, 0.05);
+  font-family: 'Questrial','Helvetica Neue',Arial,sans-serif;
+  background-color: #222;
+  transition: all .4s;
+  .navbar-brand {
+    font-family: 'Questrial','Helvetica Neue',Arial,sans-serif;
+    color: #9c27b0;
+    padding: 15px;
+    transition: padding .2s ease-in;
+    &:hover, &:focus {
+      color: #8b27b0;
+    }
+  }
+  .navbar-nav {
+    > a {
+      text-transform: uppercase;
+      font-size: 13px;
+      font-weight: 700;
+      color: #eee;
+      &:focus {
+        text-transform: uppercase;
+        font-size: 13px;
+        font-weight: 700;
+        color: #eee;
+      }
+      &:hover, &:focus:hover {
+        color: #9c27b0;
+      }
+    }
+    .nav-link.active {
+      color: #9c27b0 !important;
+      background-color: transparent;
+      &:focus {
+        color: #9c27b0 !important;
+        background-color: transparent;
+      }
+    }
+  }
 }
 
-///deep/ {
-//  .nav-link {
-//    padding: .5rem;
-//    border-radius: 3px;
-//  }
-//
-//  .nav-link:hover, .nav-link:active {
-//    background-color: #db4800;
-//  }
-//}
+/* responsive nav */
+@media (min-width: 768px) {
+  .navbar {
+    border-color: transparent;
+    background-color: transparent;
+    min-height: 60px;
 
+    .navbar-brand {
+      color: rgba(255, 255, 255, 0.7);
+      padding: 19px;
+      &:hover, &:focus {
+        color: #f4f4f4;
+      }
+    }
 
+    .navbar-nav  > a {
+      color: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      letter-spacing: 1.1px;
+      text-shadow: 1px 1px 1px rgba(60, 60, 60, 0.7);
+      &:focus {
+        color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        letter-spacing: 1.1px;
+        text-shadow: 1px 1px 1px rgba(60, 60, 60, 0.7);
+      }
+      &:hover, &:focus:hover {
+        color: #fefefe;
+      }
+    }
+
+    &.affix {
+      border-color: rgba(34, 34, 34, 0.05);
+      background-color: #222;
+
+      .navbar-brand {
+        font-size: 15px;
+        color: #9c27b0;
+        padding: 20px;
+        letter-spacing: 1px;
+        &:hover, &:focus {
+          color: #8b27b0;
+        }
+      }
+      .navbar-nav > a {
+        color: #ddd;
+        text-shadow: 1px 1px 1px rgba(30, 30, 30, 0.7);
+        &:focus {
+          color: #ddd;
+          text-shadow: 1px 1px 1px rgba(30, 30, 30, 0.7);
+        }
+        &:hover, &:focus:hover {
+          color: #9c27b0;
+        }
+      }
+    }
+
+  }
+
+}

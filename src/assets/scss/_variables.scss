@@ -1,3 +1,29 @@
 $enable-flex: true;
 
-$fa-font-path:        "/node_modules/font-awesome/fonts" !default;
+$fa-font-path:        "../node_modules/font-awesome/fonts" !default;
+
+/* Form-Control
+-------------------------------------------------- */
+//** Placeholder text color
+$input-color-placeholder:       #636c72 !default;
+
+/* PRE LOADER
+-------------------------------------------------- */
+//$primary-color: #fff !default;
+//$ball-size: 15px !default;
+//$margin: 2px !default;
+//$line-height: 35px !default;
+//$line-width: 4px !default;
+$loader_bg: #304B5C;
+
+
+/* btn
+-------------------------------------------------- */
+$btn-secondary-color: #222;
+$btn-secondary-bg:  #fff;
+$btn-secondary-border:  #fff;
+
+$btn-primary-bg: transparent;
+$btn-primary-border: #f0f0f0;
+
+

@@ -1,0 +1,17 @@
+
+.blog-header {
+  text-align: center;
+  background: url(./assets/img/landing2/bg-header.jpg) no-repeat center center scroll;
+  color: #fff;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  padding: 100px 0;
+  .header-content {
+    h1 {
+      font-size: 53px;
+      text-transform: uppercase;
+    }
+  }
+}

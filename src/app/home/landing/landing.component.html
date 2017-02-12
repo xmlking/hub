@@ -1,317 +1,258 @@
-<!--Navbar-->
-<nav id="topNav" class="navbar navbar-toggleable-md navbar-inverse fixed-top  scrolling-navbar">
-  <div class="navbar-header">
-    <button (click)="isCollapsed = !isCollapsed" class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <a class="navbar-brand" pageScroll href="#first"><i class="fa fa-bicycle"></i> Landing Zero</a>
-  </div>
-
-  <div id="bs-navbar" class="collapse navbar-collapse" [ngbCollapse]="isCollapsed">
-    <div class="navbar-nav mr-auto">
-      <a class="nav-item nav-link" pageScroll  [pageScrollInterruptible]="false" href="#one">Intro</a>
-      <a class="nav-item nav-link" pageScroll href="#two">Highlights</a>
-      <a class="nav-item nav-link" pageScroll href="#three">Gallery</a>
-      <a class="nav-item nav-link" pageScroll href="#four">Features</a>
-      <a class="nav-item nav-link" pageScroll href="#last">Contact</a>
-    </div>
-    <div class="navbar-nav">
-      <a class="nav-item nav-link" pageScroll href="#aboutModal">About</a>
+<header id="first"  (onVisibilityChange)="changeNav($event)" [scrollSpyViewport]="{cushion:-78}">
+  <div class="header-content">
+    <div class="inner">
+      <h1 class="cursive wow flipInX">Simple, One Page Design</h1> <br/>
+      <h5>A free landing page theme with video background</h5>
+      <hr class="light">
+      <button type="button"  class="btn btn-primary btn-xl" (click)="isVideoCollapsed = !isVideoCollapsed" >Toggle Video</button> &nbsp; <button pageScroll href="#one" type="button" class="btn btn-primary btn-xl">Get Started</button>
     </div>
   </div>
-</nav>
-<!--/.Navbar-->
-
-
-<!--Mask-->
-<div class="view hm-black-strong">
-  <div class="full-bg-img flex-center">
-    <ul>
-      <li>
-        <h1 class="h1-responsive wow fadeInDown" data-wow-delay="0.2s">Material Design for Bootstrap 4</h1></li>
-      <li>
-        <p class="wow fadeInDown">The most powerful and free UI KIT for Bootstrap</p>
-      </li>
-      <li>
-        <a target="_blank" href="https://mdbootstrap.com/getting-started/" class="btn btn-primary btn-lg wow fadeInLeft" data-wow-delay="0.2s">Sign up!</a>
-        <a target="_blank" href="https://mdbootstrap.com/material-design-for-bootstrap/" class="btn btn-default btn-lg wow fadeInRight" data-wow-delay="0.2s">Learn more</a>
-      </li>
-    </ul>
-  </div>
-</div>
-<!--/.Mask-->
-
-<!-- Main container-->
-<div class="container">
-
-  <div class="divider-new">
-    <h2 class="h2-responsive wow bounceIn">About us</h2>
-  </div>
-
-  <!--Section: About-->
-  <section id="about" class="text-xs-center wow bounceIn" data-wow-delay="0.2s">
-
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit explicabo assumenda eligendi ex exercitationem harum deleniti quaerat beatae ducimus dolor voluptates magnam, reiciendis pariatur culpa tempore quibusdam quidem, saepe eius.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit explicabo assumenda eligendi ex exercitationem harum deleniti quaerat beatae ducimus dolor voluptates magnam, reiciendis pariatur culpa tempore quibusdam quidem, saepe eius.</p>
-
-  </section>
-  <!--Section: About-->
-
-  <div class="divider-new">
-    <h2 class="h2-responsive wow fadeInDown">Best features</h2>
-  </div>
-
-  <!--Section: Best features-->
-  <section id="best-features">
-
+  <video [ngbCollapse]="isVideoCollapsed" autoplay="" loop="" class="fillWidth fadeIn wow collapse" data-wow-delay="0.5s" poster="./assets/img/landing/Traffic-blurred2.jpg" id="video-background">
+    <source src="./assets/videos/Traffic-blurred2.mp4" type="video/mp4">Your browser does not support the video tag. I suggest you upgrade your browser.
+  </video>
+</header>
+<section class="bg-primary" id="one">
+  <div class="container">
     <div class="row">
-
-      <!--First columnn-->
-      <div class="col-md-3">
-        <!--Card-->
-        <div class="card wow fadeInUp">
-
-          <!--Card image-->
-          <div class="view overlay hm-white-slight">
-            <img src="https://mdbootstrap.com/images/regular/city/img%20(2).jpg" class="img-fluid" alt="">
-            <a>
-              <div class="mask"></div>
-            </a>
-          </div>
-          <!--/.Card image-->
-
-          <!--Card content-->
-          <div class="card-block text-xs-center">
-            <!--Title-->
-            <h4 class="card-title">Card title</h4>
-            <hr>
-            <!--Text-->
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident fuga animi architecto dolores dicta cum quo velit.</p>
-          </div>
-          <!--/.Card content-->
-
-        </div>
-        <!--/.Card-->
+      <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2 text-center">
+        <h2 class="margin-top-0 text-primary">Built On The Bootstrap Grid</h2>
+        <br>
+        <p class="text-faded">
+          Bootstrap's responsive grid comes in 4 sizes or "breakpoints": tiny (xs), small(sm), medium(md) and large(lg). These 4 grid sizes enable you create responsive layouts that behave accordingly on different devices.
+        </p>
+        <button pageScroll href="#three" type="button" class="btn btn-secondary btn-xl wow fadeIn">Learn More</button>
       </div>
-      <!--First columnn-->
-
-      <!--Second columnn-->
-      <div class="col-md-3">
-        <!--Card-->
-        <div class="card wow fadeInUp" data-wow-delay="0.2s">
-
-          <!--Card image-->
-          <div class="view overlay hm-white-slight">
-            <img src="https://mdbootstrap.com/images/regular/city/img%20(3).jpg" class="img-fluid" alt="">
-            <a>
-              <div class="mask"></div>
-            </a>
-          </div>
-          <!--/.Card image-->
-
-          <!--Card content-->
-          <div class="card-block text-xs-center">
-            <!--Title-->
-            <h4 class="card-title">Card title</h4>
-            <hr>
-            <!--Text-->
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident fuga animi architecto dolores dicta cum quo velit.</p>
-          </div>
-          <!--/.Card content-->
-
-        </div>
-        <!--/.Card-->
-      </div>
-      <!--Second columnn-->
-
-      <!--Third columnn-->
-      <div class="col-md-3">
-        <!--Card-->
-        <div class="card wow fadeInUp" data-wow-delay="0.4s">
-
-          <!--Card image-->
-          <div class="view overlay hm-white-slight">
-            <img src="https://mdbootstrap.com/images/regular/city/img%20(4).jpg" class="img-fluid" alt="">
-            <a>
-              <div class="mask"></div>
-            </a>
-          </div>
-          <!--/.Card image-->
-
-          <!--Card content-->
-          <div class="card-block text-xs-center">
-            <!--Title-->
-            <h4 class="card-title">Card title</h4>
-            <hr>
-            <!--Text-->
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident fuga animi architecto dolores dicta cum quo velit.</p>
-          </div>
-          <!--/.Card content-->
-
-        </div>
-        <!--/.Card-->
-      </div>
-      <!--Third columnn-->
-
-      <!--Fourth columnn-->
-      <div class="col-md-3">
-        <!--Card-->
-        <div class="card wow fadeInUp" data-wow-delay="0.6s">
-
-          <!--Card image-->
-          <div class="view overlay hm-white-slight">
-            <img src="https://mdbootstrap.com/images/regular/city/img%20(8).jpg" class="img-fluid" alt="">
-            <a>
-              <div class="mask"></div>
-            </a>
-          </div>
-          <!--/.Card image-->
-
-          <!--Card content-->
-          <div class="card-block text-xs-center">
-            <!--Title-->
-            <h4 class="card-title">Card title</h4>
-            <hr>
-            <!--Text-->
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident fuga animi architecto dolores dicta cum quo velit.</p>
-          </div>
-          <!--/.Card content-->
-
-        </div>
-        <!--/.Card-->
-      </div>
-      <!--Fourth columnn-->
     </div>
-
-  </section>
-  <!--/Section: Best features-->
-
-  <div class="divider-new">
-    <h2 class="h2-responsive wow fadeInUp">Contact us</h2>
   </div>
-
-  <!--Section: Contact-->
-  <section id="contact">
+</section>
+<section id="two">
+  <div class="container">
     <div class="row">
-      <!--First column-->
-      <div class="col-md-8">
-        <div id="map-container" class="z-depth-1 wow fadeInUp" style="height: 300px"></div>
+      <div class="col-lg-12 text-center">
+        <h2 class="margin-top-0 text-primary">Flexible Layouts</h2>
+        <hr class="light">
       </div>
-      <!--/First column-->
-
-      <!--Second column-->
-      <div class="col-md-4">
-        <ul class="text-xs-center">
-          <li class="wow fadeInUp" data-wow-delay="0.2s"><i class="fa fa-map-marker"></i>
-            <p>New York, NY 10012, USA</p>
-          </li>
-
-          <li class="wow fadeInUp" data-wow-delay="0.3s"><i class="fa fa-phone"></i>
-            <p>+ 01 234 567 89</p>
-          </li>
-
-          <li class="wow fadeInUp" data-wow-delay="0.4s"><i class="fa fa-envelope"></i>
-            <p>contact@mdbootstrap.com</p>
-          </li>
-        </ul>
-      </div>
-      <!--/Second column-->
     </div>
-  </section>
-  <!--Section: Contact-->
-
-</div>
-<!--/ Main container-->
-
-
-
-<!--Footer-->
-<footer class="page-footer center-on-small-only mdb-color darken-4">
-
-  <!--Footer Links-->
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-4 text-center">
+        <div class="feature">
+          <i class="icon-lg ion-android-laptop wow fadeIn" data-wow-delay=".3s"></i>
+          <!--<i class="icon-lg ion-android-laptop fadeIn" data-wow-delay=".3s" [scrollSpyViewport]="{className: 'animated'}"></i>-->
+          <h3>Responsive</h3>
+          <p class="text-muted">Your site looks good everywhere</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 text-center">
+        <div class="feature">
+          <i class="icon-lg ion-social-sass wow fadeInUp" data-wow-delay=".2s"></i>
+          <h3>Customizable</h3>
+          <p class="text-muted">Easy to theme and customize with SASS</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 text-center">
+        <div class="feature">
+          <i class="icon-lg ion-ios-star-outline wow fadeIn" data-wow-delay=".3s"></i>
+          <h3>Consistent</h3>
+          <p class="text-muted">A mature, well-tested, stable codebase</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="three" class="no-padding">
   <div class="container-fluid">
+    <div class="row no-gutter">
+      <div class="col-lg-4 col-sm-6">
+        <a pageScroll href="#galleryModal" class="gallery-box" data-toggle="modal" data-src="./assets/img/landing/deer.jpg">
+          <img src="./assets/img/landing2/photo-gallery-01.jpg" class="img-fluid" alt="Image 1">
+          <div class="gallery-box-caption">
+            <div class="gallery-box-content">
+              <div>
+                <i class="icon-lg ion-ios-search"></i>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-lg-4 col-sm-6">
+        <a pageScroll href="#galleryModal" class="gallery-box" data-toggle="modal" data-src="./assets/img/landing/beach.jpg">
+          <img src="./assets/img/landing2/photo-gallery-02.jpg" class="img-fluid" alt="Image 2">
+          <div class="gallery-box-caption">
+            <div class="gallery-box-content">
+              <div>
+                <i class="icon-lg ion-ios-search"></i>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="clearfix hidden-lg"> </div>
+      <div class="col-lg-4 col-sm-6">
+        <a pageScroll href="#galleryModal" class="gallery-box" data-toggle="modal" data-src="./assets/img/landing/lake.jpg">
+          <img src="./assets/img/landing2/photo-gallery-03.jpg" class="img-fluid" alt="Image 3">
+          <div class="gallery-box-caption">
+            <div class="gallery-box-content">
+              <div>
+                <i class="icon-lg ion-ios-search"></i>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-lg-4 col-sm-6">
+        <a pageScroll href="#galleryModal" class="gallery-box" data-toggle="modal" data-src="./assets/img/landing/bike.jpg">
+          <img src="./assets/img/landing2/photo-gallery-04.jpg" class="img-fluid" alt="Image 4">
+          <div class="gallery-box-caption">
+            <div class="gallery-box-content">
+              <div>
+                <i class="icon-lg ion-ios-search"></i>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="clearfix hidden-lg"> </div>
+      <div class="col-lg-4 col-sm-6">
+        <a pageScroll href="#galleryModal" class="gallery-box" data-toggle="modal" data-src="./assets/img/landing/city.jpg">
+          <img src="./assets/img/landing2/photo-gallery-05.jpg" class="img-fluid" alt="Image 5">
+          <div class="gallery-box-caption">
+            <div class="gallery-box-content">
+              <div>
+                <i class="icon-lg ion-ios-search"></i>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-lg-4 col-sm-6">
+        <a pageScroll href="#galleryModal" class="gallery-box" data-toggle="modal" data-src="./assets/img/landing/colors.jpg">
+          <img src="./assets/img/landing2/photo-gallery-06.jpg" class="img-fluid" alt="Image 6">
+          <div class="gallery-box-caption">
+            <div class="gallery-box-content">
+              <div>
+                <i class="icon-lg ion-ios-search"></i>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="four">
+  <div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-10 offset-xs-1 col-sm-6 offset-sm-3 col-md-4 offset-md-4">
+      <h2 class="text-center text-primary">Features</h2>
+      <hr>
+      <div class="media wow fadeInRight">
+        <div class="media-body">
+          <h4>Simple</h4>
+          What could be easier? Get started fast with this landing page starter theme.
+        </div>
+        <i class="icon-lg ion-ios-bolt-outline"></i>
+      </div>
+      <hr class="light">
+      <div class="media wow fadeIn">
+        <i class="icon-lg ion-ios-cloud-download-outline mr-3"></i>
+        <div class="media-body">
+          <h3>Free</h3>
+          <p>Yes, please. Grab it for yourself, and make something awesome with this.</p>
+        </div>
+      </div>
+      <hr class="light">
+      <div class="media wow fadeInRight">
+        <div class="media-body">
+          <h4>Unique</h4>
+          <p>Because you don't want your Bootstrap site, to look like a Bootstrap site.</p>
+        </div>
+        <i class="icon-lg ion-ios-snowy"></i>
+      </div>
+      <hr class="light">
+      <div class="media wow fadeIn">
+        <i class="icon-lg ion-ios-heart-outline mr-3"></i>
+        <div class="media-body">
+          <h4>Popular</h4>
+          <p>There's good reason why Bootstrap is the most used frontend framework in the world.</p>
+        </div>
+      </div>
+      <hr class="light">
+      <div class="media wow fadeInRight">
+        <div class="media-body">
+          <h4>Tested</h4>
+          <p>Bootstrap is matured and well-tested. It's a stable codebase that provides consistency.</p>
+        </div>
+        <i class="icon-lg ion-ios-flask-outline ml-3"></i>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+<aside class="bg-dark">
+  <div class="container text-center">
+    <div class="call-to-action">
+      <h2 class="text-primary">Get Started</h2>
+      <button pageScroll href="#first" type="button" class="btn btn-secondary btn-lg wow flipInX">Free Download</button>
+    </div>
+    <br>
+    <hr class="light">
+    <br>
     <div class="row">
-
-      <!--First column-->
-      <div class="col-md-3 offset-md-1">
-        <h5 class="title">ABOUT MATERIAL DESIGN</h5>
-        <p>Material Design (codenamed Quantum Paper) is a design language developed by Google. </p>
-
-        <p>Material Design for Bootstrap (MDB) is a powerful Material Design UI KIT for most popular HTML, CSS, and JS framework - Bootstrap.</p>
+      <div class="col-lg-10 offset-lg-1">
+          <h6 class="wide-space text-center text-uppercase">Bootstrap is Built on these Standards</h6>
+          <div class="row">
+            <div class="col-sm-3 col-6 text-center">
+              <i class="icon-lg ion-social-html5-outline" title="html 5"></i>
+            </div>
+            <div class="col-sm-3 col-6 text-center">
+              <i class="icon-lg ion-social-sass" title="sass"></i>
+            </div>
+            <div class="col-sm-3 col-6 text-center">
+              <i class="icon-lg ion-social-javascript-outline" title="javascript"></i>
+            </div>
+            <div class="col-sm-3 col-6 text-center">
+              <i class="icon-lg ion-social-css3-outline" title="css 3"></i>
+            </div>
+          </div>
       </div>
-      <!--/.First column-->
-
-      <hr class="hidden-md-up">
-
-      <!--Second column-->
-      <div class="col-md-2 offset-md-1">
-        <h5 class="title">First column</h5>
-        <ul>
-          <li><a href="#!">Link 1</a></li>
-          <li><a href="#!">Link 2</a></li>
-          <li><a href="#!">Link 3</a></li>
-          <li><a href="#!">Link 4</a></li>
-        </ul>
-      </div>
-      <!--/.Second column-->
-
-      <hr class="hidden-md-up">
-
-      <!--Third column-->
-      <div class="col-md-2">
-        <h5 class="title">Second column</h5>
-        <ul>
-          <li><a href="#!">Link 1</a></li>
-          <li><a href="#!">Link 2</a></li>
-          <li><a href="#!">Link 3</a></li>
-          <li><a href="#!">Link 4</a></li>
-        </ul>
-      </div>
-      <!--/.Third column-->
-
-      <hr class="hidden-md-up">
-
-      <!--Fourth column-->
-      <div class="col-md-2">
-        <h5 class="title">Third column</h5>
-        <ul>
-          <li><a href="#!">Link 1</a></li>
-          <li><a href="#!">Link 2</a></li>
-          <li><a href="#!">Link 3</a></li>
-          <li><a href="#!">Link 4</a></li>
-        </ul>
-      </div>
-      <!--/.Fourth column-->
-
     </div>
   </div>
-  <!--/.Footer Links-->
-
-  <hr>
-
-  <!--Call to action-->
-  <div class="call-to-action">
-    <h4>Material Design for Bootstrap</h4>
-    <ul>
-      <li>
-        <h5>Get our UI KIT for free</h5></li>
-      <li><a target="_blank" href="https://mdbootstrap.com/getting-started/" class="btn btn-danger">Sign up!</a></li>
-      <li><a target="_blank" href="https://mdbootstrap.com/material-design-for-bootstrap/" class="btn btn-default">Learn more</a></li>
-    </ul>
-  </div>
-  <!--/.Call to action-->
-
-  <!--Copyright-->
-  <div class="footer-copyright">
-    <div class="container-fluid">
-      © 2015 Copyright: <a href="https://mdbootstrap.com"> MDBootstrap.com </a>
-
+</aside>
+<section id="last">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2 text-center">
+        <h2 class="margin-top-0 wow fadeIn">Get in Touch</h2>
+        <hr class="light">
+        <p>We love feedback. Fill out the form below and we'll get back to you as soon as possible.</p>
+      </div>
+      <div class="col-lg-10 offset-lg-1 text-center">
+        <form class="contact-form row">
+          <div class="col-md-4">
+            <label></label>
+            <input type="text" class="form-control" placeholder="Name">
+          </div>
+          <div class="col-md-4">
+            <label></label>
+            <input type="text" class="form-control" placeholder="Email">
+          </div>
+          <div class="col-md-4">
+            <label></label>
+            <input type="text" class="form-control" placeholder="Phone">
+          </div>
+          <div class="col-md-12">
+            <label></label>
+            <textarea class="form-control" rows="9" placeholder="Your message here.."></textarea>
+          </div>
+          <div class="col-md-4 offset-md-4">
+            <label></label>
+            <button type="button" data-toggle="modal" data-target="#alertModal" class="btn btn-primary btn-block btn-lg">Send <i class="ion-android-arrow-forward"></i></button>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
-  <!--/.Copyright-->
-
-</footer>
-<!--/.Footer-->
-
-
+</section>
 

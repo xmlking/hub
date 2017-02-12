@@ -1,21 +1,36 @@
-<nav id="topNav" class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
-    <div class="navbar-header">
-      <button (click)="isCollapsed = !isCollapsed" class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <a class="navbar-brand" pageScroll href="#first"><i class="fa fa-bicycle"></i> Landing Zero</a>
-    </div>
+<nav id="topNav" class="navbar fixed-top navbar-toggleable-md navbar-inverse">
+  <!--[if lt IE 10]>
+  <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a
+    href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+    <button (click)="isCollapsed = !isCollapsed" class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a pageScroll class="navbar-brand" routerLink="/home" fragment="first" href="#first"><i class="ion-ios-analytics-outline"></i> {{title}}</a>
 
-    <div id="bs-navbar" class="collapse navbar-collapse" [ngbCollapse]="isCollapsed">
+    <div class="collapse navbar-collapse" [ngbCollapse]="isCollapsed">
+
       <div class="navbar-nav mr-auto">
-        <a class="nav-item nav-link" pageScroll  [pageScrollInterruptible]="false" href="#one">Intro</a>
-        <a class="nav-item nav-link" pageScroll href="#two">Highlights</a>
-        <a class="nav-item nav-link" pageScroll href="#three">Gallery</a>
-        <a class="nav-item nav-link" pageScroll href="#four">Features</a>
-        <a class="nav-item nav-link" pageScroll href="#last">Contact</a>
+        <!-- FIXME: https://github.com/angular/angular/issues/13205 -->
+        <!-- <a pageScroll class="nav-item nav-link"  routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" routerLink="/home" fragment="one" href="#one">Intro</a>-->
+        <a pageScroll class="nav-item nav-link" routerLink="/home" fragment="one" href="#one" (click)="collapseNav()">Intro</a>
+        <a pageScroll class="nav-item nav-link" routerLink="/home" fragment="two" href="#two" (click)="collapseNav()">Highlights</a>
+        <a pageScroll class="nav-item nav-link" routerLink="/home" fragment="three" href="#three" (click)="collapseNav()">Gallery</a>
+        <a pageScroll class="nav-item nav-link" routerLink="/home" fragment="four" href="#four" (click)="collapseNav()">Features</a>
+        <a pageScroll class="nav-item nav-link" routerLink="/home" fragment="last" href="#last" (click)="collapseNav()">Contact</a>
       </div>
+
       <div class="navbar-nav">
-        <a class="nav-item nav-link" pageScroll href="#aboutModal">About</a>
+        <a class="nav-item nav-link" (click)="openLogin()">Sign in</a>
+        <a class="nav-item nav-link" (click)="openSignup()">Sign up</a>
       </div>
+
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" routerLinkActive="active" routerLink="/home/blog" (click)="collapseNav()">Blog</a>
+        <a class="nav-item nav-link" routerLinkActive="active" routerLink="/home/about" (click)="collapseNav()">About</a>
+      </div>
+
     </div>
 </nav>
+
+

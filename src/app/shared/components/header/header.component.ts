@@ -6,6 +6,8 @@ import {AppState} from '../../../app.reducers';
 import {LoginComponent} from '../../../auth/login/login.component';
 import {SignupComponent} from '../../../auth/signup/signup.component';
 
+import {environment} from '../../../../environments/environment';
+
 @Component({
   selector: 'header[app-header]',
   templateUrl: './header.component.html',
@@ -14,19 +16,13 @@ import {SignupComponent} from '../../../auth/signup/signup.component';
 })
 export class HeaderComponent implements OnInit {
 
-  title = 'Orange';
+  title = environment.TITLE;
   isCollapsed: boolean;
 
   constructor(public router: Router, private store: Store<AppState>, private modalActions: ModalActions) {}
 
   ngOnInit() {
     this.isCollapsed = true;
-  }
-
-  public collapsed(event: any): void {
-  }
-
-  public expanded(event: any): void {
   }
 
   openLogin() {

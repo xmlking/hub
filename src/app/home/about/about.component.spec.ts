@@ -5,7 +5,7 @@ import { AboutComponent } from './about.component';
 
 describe('Component: About', () => {
   it('should create an instance', () => {
-    let component = new AboutComponent();
+    const component = new AboutComponent();
     expect(component).toBeTruthy();
   });
 });

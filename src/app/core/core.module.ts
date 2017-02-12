@@ -10,6 +10,7 @@ import {ModalEffects} from './modal/modal.effects';
 import {ModalService} from './modal/modal.service';
 import {ModalActions} from './modal/modal.actions';
 import {RouterModule} from '@angular/router';
+import {WindowService} from './services/window.service';
 
 @NgModule({
   imports: [
@@ -26,6 +27,7 @@ import {RouterModule} from '@angular/router';
   providers: [
     ...Services,
     ...Guards,
+    {provide: WindowService, useValue: window},
 
     ModalActions,
     ModalService,
@@ -39,14 +41,4 @@ export class CoreModule {
         'CoreModule is already loaded. Import it in the AppModule only');
     }
   }
-
-  // static forRoot(config: UserServiceConfig): ModuleWithProviders {
-  //   return {
-  //     ngModule: CoreModule,
-  //     providers: [
-  //       {provide: UserServiceConfig, useValue: config}
-  //     ]
-  //   };
-  // }
-
 }

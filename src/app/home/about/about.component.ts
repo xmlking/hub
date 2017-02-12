@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Inject, OnDestroy, OnInit, Renderer, ViewEncapsulation} from '@angular/core';
+import {DOCUMENT, Title} from '@angular/platform-browser';
+
 
 @Component({
   selector: 'app-about',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
-  constructor() { }
+  constructor(@Inject(DOCUMENT) private document: Document, private renderer: Renderer, private titleService: Title) {
+  }
 
   ngOnInit() {
+    this.titleService.setTitle('About Page');
+  }
+
+
+  changeNav(inView) {
+    const topNav = this.document.getElementById('topNav');
+    this.renderer.setElementClass(topNav, 'affix', !inView);
   }
 
 }

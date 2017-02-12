@@ -3,6 +3,8 @@ import {Effect, Actions} from '@ngrx/effects';
 import {ModalActions} from './modal.actions';
 import {Store} from '@ngrx/store';
 import {ModalService} from './modal.service';
+import 'rxjs/add/operator/do';
+
 @Injectable()
 export class ModalEffects {
 
