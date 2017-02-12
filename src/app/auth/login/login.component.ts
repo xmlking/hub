@@ -1,9 +1,10 @@
-import {Component, OnInit, ChangeDetectionStrategy} from '@angular/core';
+import {Component, OnInit, OnDestroy, ChangeDetectionStrategy} from '@angular/core';
 import {Validators, FormGroup, FormBuilder} from '@angular/forms';
 import {Store} from '@ngrx/store';
 import {AppState} from '../../app.reducers';
 import {Observable} from 'rxjs/Observable';
 import {ModalActions} from '../../core/modal/modal.actions';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -11,14 +12,14 @@ import {ModalActions} from '../../core/modal/modal.actions';
   styleUrls: ['./login.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent implements OnInit, OnDestroy {
   loginForm: FormGroup;
   submitted = false;
 
   isLoggedIn$: Observable<boolean>;
   loginError$: Observable<string>;
 
-  constructor(private fb: FormBuilder, private store: Store<AppState>, private modalActions: ModalActions) {
+  constructor(private fb: FormBuilder, private store: Store<AppState>, private modalActions: ModalActions,  public router: Router) {
 
     // using Function
     this.isLoggedIn$ = store.select<boolean>(s => s.modal.open);
@@ -50,6 +51,8 @@ export class LoginComponent implements OnInit {
     // this.store.dispatch(this.authActions.loginUser(form.value));
     localStorage.setItem('id_token', 'ccccc');
     this.store.dispatch(this.modalActions.close('login success'));
+    // TODO
+    this.router.navigate(['/dashboard']);
   }
 
   ngOnDestroy() {

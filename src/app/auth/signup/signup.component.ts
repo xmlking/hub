@@ -1,10 +1,11 @@
-import {Component, OnDestroy, ChangeDetectionStrategy} from '@angular/core';
+import {Component, OnInit, OnDestroy, ChangeDetectionStrategy} from '@angular/core';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { Observable } from 'rxjs/Observable';
 import {Store} from '@ngrx/store';
 import {AppState} from '../../app.reducers';
 import {ModalActions} from '../../core/modal/modal.actions';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-signup',
@@ -12,13 +13,13 @@ import {ModalActions} from '../../core/modal/modal.actions';
   styleUrls: ['./signup.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class SignupComponent implements OnDestroy {
+export class SignupComponent implements OnInit, OnDestroy {
   signUpForm: FormGroup;
   submitted = false;
   isLoggedIn$: Observable<boolean>;
   signUpError$: Observable<string>;
 
-  constructor(private fb: FormBuilder, private store: Store<AppState>, private modalActions: ModalActions) {
+  constructor(private fb: FormBuilder, private store: Store<AppState>, private modalActions: ModalActions, public router: Router) {
     // this.isLoggedIn$ = store.select(s => s.modal.open);
     // this.signUpError$ = store.select(s => s.modal.open);
   }
