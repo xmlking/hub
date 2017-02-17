@@ -1,0 +1,17 @@
+<div class="card text-center">
+  <div class="card-header">
+    Heart Rate
+  </div>
+  <div class="card-block">
+    <!--<h4 class="card-title">live heartbeat feed from {{deviceName}}</h4>-->
+    <div class="mb-3"> Heart Rate from: {{deviceName}}</div>
+    <!--<app-heart-rate-display [hrData]="hrDataStream | async"></app-heart-rate-display>-->
+    <app-heart-rate-display [hrData]="hrDataStream | async"></app-heart-rate-display>
+
+    <br>
+    <button type="button" class="btn btn-primary float-right mb-2" (click)="toggle()">{{connected? 'Stop': 'Start'}}</button>
+  </div>
+</div>
+
+<br/>
+<br/>

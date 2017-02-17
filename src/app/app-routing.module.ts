@@ -5,10 +5,9 @@ import {AuthGuard} from './core/guards/auth.guard';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full'},
-
-  { path : 'about', loadChildren : './home/about/about.module#AboutModule' },
   { path: 'home',       loadChildren: './home/home.module#HomeModule' },
   { path: 'dashboard',  loadChildren: './dashboard/dashboard.module#DashboardModule'},
+  { path: 'doctor',      loadChildren: './doctor/doctor.module#DoctorModule' },
   // { path: 'admin',      loadChildren: './admin/admin.module#AdminModule', canActivate: [AuthGuard] },
   { path: 'admin',      loadChildren: './admin/admin.module#AdminModule' },
   { path: '404',        loadChildren: './404/404.module#PageNotFoundModule'},

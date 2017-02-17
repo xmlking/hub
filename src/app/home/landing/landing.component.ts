@@ -17,7 +17,7 @@ export class LandingComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.titleService.setTitle('Landing Page');
-    this.isVideoCollapsed = true;
+    this.isVideoCollapsed = false;
   }
 
 

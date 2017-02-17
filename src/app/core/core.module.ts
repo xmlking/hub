@@ -1,4 +1,4 @@
-import { ModuleWithProviders, NgModule, Optional, SkipSelf } from '@angular/core';
+import { ModuleWithProviders, NgModule, Optional, SkipSelf, ErrorHandler } from '@angular/core';
 import { SharedModule } from '../shared/shared.module';
 
 import {Services} from './services';
@@ -11,6 +11,7 @@ import {ModalService} from './modal/modal.service';
 import {ModalActions} from './modal/modal.actions';
 import {RouterModule} from '@angular/router';
 import {WindowService} from './services/window.service';
+import {CustomErrorHandler} from './services/CustomErrorHandler';
 
 @NgModule({
   imports: [

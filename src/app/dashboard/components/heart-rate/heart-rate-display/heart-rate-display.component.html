@@ -1,0 +1,15 @@
+<app-smoothie-chart
+  width="900"
+  height="100"
+  [incomingData]="hrData?.heartRate"></app-smoothie-chart>
+<div class="mb-3"> RR intervals </div>
+<app-smoothie-chart
+  width="900"
+  height="100"
+  [chartOptions]='{minValue: 100, maxValue: 1024}'
+  [incomingData]="hrData?.rrIntervals ? hrData.rrIntervals[0] : 0"></app-smoothie-chart>
+<span style="margin-left: 2cm; vertical-align:baseline;" class="fa-stack fa-4x mt-3">
+    <i id="heart"  #heart class="fa fa-heart fa-stack-2x"></i>
+    <i id="hr" class="fa-stack-1x fa-stack-text fa-inverse">{{hrData?.heartRate}}</i>
+</span>
+

@@ -1,20 +1,10 @@
-<div class="card card-inverse card-primary">
+<!--<div class="card card-inverse" style="background-color: #1b1e27; border-color: #333;">-->
+<div class="card " >
+  <div class="card-header">
+    Profile : Sumanth
+  </div>
   <div class="card-block">
-    <h4 class="card-title">Profile</h4>
-
-    <h6 class="card-subtitle">Selected Account: <span class="tag tag-pill tag-warning">{{selectedAccount}}</span></h6>
-    <blockquote class="card-blockquote">
-      <p>This is your current balance, Keep updating your records and get more Orange Dollars</p>
-      <div class="card card-inverse card-success">
-        <div class="card-block bg-success">
-          <div class="rotate">
-            <i class="fa fa-btc fa-5x"></i>
-          </div>
-          <h6 class="text-uppercase">Balance</h6>
-          <h1 class="display-1">555</h1>
-        </div>
-      </div>
-      <p class="card-text float-xs-right"><small class="text-muted">Last updated {{lastUpdated | amTimeAgo}} for {{action}}</small></p>
-    </blockquote>
+    <app-pie-grid></app-pie-grid>
   </div>
 </div>
+

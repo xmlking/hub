@@ -1,0 +1,12 @@
+<div class="card text-center">
+  <div class="card-header">
+    Active Users
+  </div>
+  <div class="card-block">
+    <h4 class="card-title">Connected Users</h4>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li *ngFor="let user of users" class="list-group-item" [class.active]="user == selectedUser" (click)="setCurrentUser(user)" >{{user.name}}</li>
+  </ul>
+</div>

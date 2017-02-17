@@ -66,6 +66,8 @@ ng g component home/components/footer --dry-run
 ng g module home/blog --routing   --dry-run
 
 ng g component shared/components/backButton  --dry-run
+ng g component shared/components/SmoothieChart  --dry-run
+ng g service SocketIo core/services/SocketIo --dry-run  
 
 ng g component shared/header --dry-run
 ng g component shared/footer --dry-run
@@ -74,6 +76,18 @@ ng g component shared/footer --dry-run
 ng g module dashboard lazy --routing   --dry-run
 ng g class dashboard/provider model  --dry-run
 ng g interface dashboard/payer model  --dry-run
+ng g component dashboard/components/BalanceHistory --dry-run
+ng g component dashboard/components/HeartRate --dry-run
+ng g service dashboard/components/Battery-Level/BatteryLevel --dry-run
+# scaffold `doctor` sub-module and sub components under `dashboard`
+ng g module dashboard/doctor lazy --routing   --dry-run
+ng g component dashboard/doctor/components/ActiveUsers --dry-run
+ng g service dashboard/components/Heart-Rate/HeartRate --dry-run
+
+
+ng g component doctor/components/charts --skip-import --dry-run
+ng g component doctor/components/pie-grid --skip-import --dry-run
+
 
 # scaffold `about` lazy module with `routes`
 ng g module about lazy --routing   --dry-run
@@ -83,8 +97,6 @@ ng g module 404 lazy --routing   --dry-run
 ng g service core/ethereum   --dry-run
 
 ng g module admin lazy --routing   --dry-run
-ng g component dashboard/BalanceHistory --dry-run
-ng g component shared/components/LeaderBoard --dry-run
 ng g component home/login --dry-run
 ng g module core
 ```
@@ -143,3 +155,12 @@ http://asktoanswer.com/questions/how-to-use-wow-js-in-angular-2-webpack/
  parallax
  https://github.com/ng2-ui/ng2-parallax-scroll
 scroll spy ecample https://github.com/dshybeka/buildka
+
+Meterial CSS
+https://github.com/BafS/Kaudio-frontend/blob/master/src/styles.scss
+
+Bluetooth
+https://github.com/urish/ng-beacon-app/blob/master/src/app/ble-uart.service.ts
+https://github.com/urish/hot-or-not/blob/master/src/app/environmental-sensing.service.ts
+
+https://github.com/oroce/polar-h7-rr-phone/tree/master
