@@ -11,7 +11,6 @@ import {ModalService} from './modal/modal.service';
 import {ModalActions} from './modal/modal.actions';
 import {RouterModule} from '@angular/router';
 import {WindowService} from './services/window.service';
-import {CustomErrorHandler} from './services/CustomErrorHandler';
 
 @NgModule({
   imports: [

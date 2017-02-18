@@ -118,6 +118,10 @@ ng g module code --dry-run
 ng generate module --help
 ```
 
+### Run
+```bash
+npm start -- -open
+```
 
 #### FAQ
 Core, Shared and Feature modules?

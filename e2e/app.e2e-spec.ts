@@ -1,6 +1,6 @@
 import { HubPage } from './app.po';
 
-describe('hub App', function() {
+describe('hub App', () => {
   let page: HubPage;
 
   beforeEach(() => {
