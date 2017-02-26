@@ -3,7 +3,7 @@ import {ToastyService, ToastyConfig } from 'ng2-toasty';
 import {SpinnerService} from './core/services/spinner.service';
 import {NavigationStart, Router} from '@angular/router';
 
-import {TranslateService} from 'ng2-translate';
+import { TranslateService } from '@ngx-translate/core';
 import {PageScrollConfig} from 'ng2-page-scroll';
 
 @Component({
@@ -13,16 +13,24 @@ import {PageScrollConfig} from 'ng2-page-scroll';
   changeDetection: ChangeDetectionStrategy.Default // Everything else uses OnPush
 })
 export class AppComponent implements OnInit {
-
+  public language: string;
   constructor(translate: TranslateService, toastyConfig: ToastyConfig, private _router: Router, private spinnerService: SpinnerService) {
     // Assign the selected theme name to the `theme` property of the instance of ToastyConfig.
     // Possible values: default, bootstrap, material
     toastyConfig.theme = 'bootstrap';
 
-    // this language will be used as a fallback when a translation isn't found in the current language
-    translate.setDefaultLang('en');
+    this.language = translate.getBrowserLang();
+    // translate.addLangs(["en", "fr"]);
+    translate.setDefaultLang('en'); // fallback
 
-    const observ = translate.use(translate.getBrowserLang());
+    const observ = translate.use(this.language.match(/en|es|fr|ru/) ? this.language : 'en');
+
+    // // subscribe to changes
+    // store.select('i18n').subscribe((state: IMultilingualState) => {
+    //   // update ng2-translate which will cause translations to occur wherever the TranslatePipe is used in the view
+    //   this.translate.use(state.lang);
+    // });
+
     this.spinnerService.onObservable(observ);
 
     PageScrollConfig.defaultScrollOffset = 75;

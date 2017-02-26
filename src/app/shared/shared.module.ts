@@ -8,7 +8,7 @@ import {RouterModule} from '@angular/router';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { MomentModule } from 'angular2-moment';
 import {Ng2PageScrollModule} from 'ng2-page-scroll';
-import {TranslateModule} from 'ng2-translate';
+import { TranslateModule } from '@ngx-translate/core';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 

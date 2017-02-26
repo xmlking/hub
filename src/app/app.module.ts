@@ -17,11 +17,14 @@ import { AppState, rootReducer } from './app.reducers';
 /* Feature Modules */
 import { CoreModule } from './core/core.module';
 import { AuthModule } from './auth/auth.module';
-import {TranslateLoader, TranslateModule, TranslateStaticLoader} from 'ng2-translate';
+
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import {Http} from '@angular/http';
 
-export function createTranslateLoader(http: Http) {
-  return new TranslateStaticLoader(http, './assets/i18n', '.json');
+// AoT requires an exported function for factories
+export function HttpLoaderFactory(http: Http) {
+  return new TranslateHttpLoader(http);
 }
 
 @NgModule({
@@ -35,9 +38,11 @@ export function createTranslateLoader(http: Http) {
     ScrollSpyModule.forRoot(),
     Ng2PageScrollModule.forRoot(),
     TranslateModule.forRoot({
-      provide: TranslateLoader,
-      useFactory: (createTranslateLoader),
-      deps: [Http]
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [Http]
+      }
     }),
     AuthModule,
     CoreModule,

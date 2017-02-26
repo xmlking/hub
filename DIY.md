@@ -4,8 +4,8 @@ Do-it-yourself guide to setup new Angular app.
 
 ### Install Prerequisites
 ```bash
-# install Node (> 7.5.0) with NVM
-nvm install node 7.5.0
+# install Node (> 7.6.0) with NVM
+nvm install node 7.6.0
 
 # install yarn a better package manager then NPM
 brew update
@@ -13,7 +13,7 @@ brew install yarn
 
 # install typescript
 yarn global add typescript
-yarn global add  @angular/cli
+yarn global add  @angular/cli@latest
 ng set --global packageManager=yarn
 
 
@@ -83,6 +83,7 @@ ng g service dashboard/components/Battery-Level/BatteryLevel --dry-run
 ng g module dashboard/doctor lazy --routing   --dry-run
 ng g component dashboard/doctor/components/ActiveUsers --dry-run
 ng g service dashboard/components/Heart-Rate/HeartRate --dry-run
+
 
 
 ng g component doctor/components/charts --skip-import --dry-run

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
-import {BluetoothCore} from '../../services/bluetooth';
+import { BluetoothCore } from '@manekinekko/angular-web-bluetooth';
 
 
 @Injectable()

@@ -4,7 +4,8 @@ import { SharedModule } from '../shared/shared.module';
 import { DashboardComponent } from './dashboard.component';
 import { dashboardRoutes } from './dashboard-routing.module';
 
-// import { WebBluetoothModule } from '@manekinekko/angular-web-bluetooth';
+import { WebBluetoothModule, BrowserWebBluetooth } from '@manekinekko/angular-web-bluetooth';
+import { BluetoothService } from './bluetooth.service';
 
 import Components from './components';
 
@@ -13,19 +14,21 @@ import { UserEffects } from './user/user.effects';
 import { UserActions } from './user/user.actions';
 import { UserService } from './user/user.service';
 
-import { BluetoothCore } from './services/bluetooth';
-
 @NgModule({
   imports: [
-    // WebBluetoothModule.forRoot(),
+    WebBluetoothModule.forRoot({
+      enableTracing: false
+    }),
     EffectsModule.run(UserEffects),
     SharedModule,
-    dashboardRoutes
+    dashboardRoutes,
   ],
   providers:    [
     UserService,
     UserActions,
-    BluetoothCore,
+    {
+      provide: BrowserWebBluetooth, useClass: BluetoothService
+    },
   ],
   declarations: [
     DashboardComponent,

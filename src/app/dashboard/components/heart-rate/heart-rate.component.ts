@@ -1,7 +1,7 @@
 import {
   Component, OnInit, OnDestroy, NgZone, ViewChild, Renderer, ElementRef, AfterViewInit} from '@angular/core';
 import { HeartRateService, HrData } from './heart-rate.service';
-import {BluetoothCore} from '../../services/bluetooth';
+import { BluetoothCore } from '@manekinekko/angular-web-bluetooth';
 import {Observable} from 'rxjs/Observable';
 import {ToastyService} from 'ng2-toasty';
 

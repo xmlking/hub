@@ -6,8 +6,7 @@ import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/mergeMap';
 import 'rxjs/add/operator/share';
 
-// import {BluetoothCore} from '@manekinekko/angular-web-bluetooth';
-import {BluetoothCore} from '../../services/bluetooth';
+import { BluetoothCore } from '@manekinekko/angular-web-bluetooth';
 
 import {SocketIoService} from '../../../core/services/socket-io.service';
 
@@ -21,7 +20,7 @@ declare var BluetoothUUID: any;
 @Injectable()
 export class HeartRateService {
 
-  static GATT_PRIMARY_SERVICE =  BluetoothUUID.getService('heart_rate'); // 0x180D;
+  static GATT_PRIMARY_SERVICE =  (typeof BluetoothUUID !== 'undefined') ? BluetoothUUID.getService('heart_rate') : 'heart_rate'; // 0x180D;
   static GATT_CHARACTERISTIC_HEART_RATE = 'heart_rate_measurement';  // 0x2A37;
   static GATT_CHARACTERISTIC_SENSOR_LOCATION =  'body_sensor_location';
 

@@ -1,3 +1,3 @@
-import { OpaqueToken } from '@angular/core';
+import { InjectionToken } from '@angular/core';
 
-export const WindowService = new OpaqueToken('WindowService');
+export const WindowService = new InjectionToken('WindowService');

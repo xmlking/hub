@@ -1,4 +1,4 @@
-import { Injectable, Inject, OpaqueToken, NgZone } from '@angular/core';
+import { Injectable, Inject, NgZone , InjectionToken} from '@angular/core';
 
 // libs
 import { Store, ActionReducer, Action } from '@ngrx/store';
@@ -15,7 +15,7 @@ import { StorageService } from './storage.service';
 const CATEGORY = Tracking.Categories.USERS;
 
 // Auth0 Lock
-export const AUTH_LOCK: OpaqueToken = new OpaqueToken('Auth0Lock');
+export const AUTH_LOCK = new InjectionToken('Auth0Lock');
 
 /**
  * ngrx start --
@@ -70,7 +70,9 @@ export class AuthService extends Analytics {
   // Auth0
   private lock: any;
 
-  constructor(public analytics: AnalyticsService, private store: Store<any>, private storage: StorageService, private log: LogService, @Inject(AUTH_LOCK) private authLock: any, private win: WindowService, private ngZone: NgZone) {
+  constructor(public analytics: AnalyticsService, private store: Store<any>,
+              private storage: StorageService, private log: LogService,
+              @Inject(AUTH_LOCK) private authLock: any, private win: WindowService, private ngZone: NgZone) {
     super(analytics);
     this.category = Tracking.Categories.USERS;
 
