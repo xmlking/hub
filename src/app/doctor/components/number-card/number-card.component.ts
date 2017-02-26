@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import {single, multi} from './data';
+import { Component, Input, OnInit } from '@angular/core';
+import { single, multi } from './data';
+import {ActiveUser} from '../../services/active-users.service';
 
 @Component({
   selector: 'app-number-card',
@@ -16,7 +17,7 @@ export class NumberCardComponent implements OnInit {
   colorScheme = {
     domain: ['#5AA454', '#A10A28', '#C7B42C']
   };
-
+  @Input() user: ActiveUser;
   constructor() {
     Object.assign(this, {single});
   }

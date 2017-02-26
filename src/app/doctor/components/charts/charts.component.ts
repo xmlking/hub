@@ -1,11 +1,13 @@
-import { Component } from '@angular/core';
+import {Component, Input, OnChanges} from '@angular/core';
+import {ActiveUser} from '../../services/active-users.service';
 
 @Component({
   selector: 'app-charts',
   templateUrl: './charts.component.html',
 })
-export class ChartsComponent {
+export class ChartsComponent implements OnChanges {
   title = 'app works!';
+  @Input() user: ActiveUser;
   colorScheme = {
     domain: ['#F44336', '#3F51B5', '#8BC34A', '#2196F3', '#009688', '#FF5722', '#CDDC39', '#00BCD4', '#FFC107', '#795548', '#607D8B']
   };
@@ -114,6 +116,7 @@ export class ChartsComponent {
 
   constructor() { }
 
-
-
+  ngOnChanges(changes) {
+    console.log('changes', changes);
+  }
 }

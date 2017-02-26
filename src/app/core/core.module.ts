@@ -11,12 +11,20 @@ import {ModalService} from './modal/modal.service';
 import {ModalActions} from './modal/modal.actions';
 import {RouterModule} from '@angular/router';
 import {WindowService} from './services/window.service';
+import {InMemoryApiModule} from '../in-memory-api/in-memory-api.module';
+import { environment } from '../../environments/environment';
+
+const demoOnly: any[] = [];
+if (environment.demo) {
+  demoOnly.push(InMemoryApiModule);
+}
 
 @NgModule({
   imports: [
     RouterModule,
     SharedModule,
     EffectsModule.run(ModalEffects),
+    ...demoOnly,
   ],
   declarations: [
     ...Components,

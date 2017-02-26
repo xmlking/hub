@@ -5,10 +5,11 @@
 
 export const environment = {
   production: false,
+  demo: false,
 
   TITLE: 'Fitness Zone',
 
-  AUTH_BASE_URL: 'http://localhost:8080',
-  API_BASE_URL: 'http://localhost:8080',
+  API_BASE_URL: 'http://localhost:3000/api',
+  GRAILS_BASE_URL: 'http://localhost:8080',
   WS_BASE_URL: 'http://localhost:8090',
 };

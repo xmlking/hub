@@ -1,37 +1,31 @@
-import { Component, OnInit } from '@angular/core';
-
-const USERS = [
-  {id: 1, name: 'Superman'},
-  {id: 2, name: 'Batman'},
-  {id: 5, name: 'BatGirl'},
-  {id: 3, name: 'Robin'},
-  {id: 4, name: 'Flash'}
-];
-
-interface ActiveUser {
-  id: number;
-  name: string;
-}
+import {ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {ActiveUser} from '../../services/active-users.service';
 
 @Component({
   selector: 'app-active-users',
   templateUrl: 'active-users.component.html',
-  styleUrls: ['active-users.component.scss']
+  styleUrls: ['active-users.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ActiveUsersComponent implements OnInit {
 
-
-  users: ActiveUser[] ;
+  @Input() activeUsers:  ActiveUser[];
+  @Output() _select: EventEmitter<any> = new EventEmitter();
+  @Output() _delete: EventEmitter<any> = new EventEmitter();
   selectedUser: ActiveUser;
   constructor() { }
 
   ngOnInit() {
-    this.users = USERS;
-    this.selectedUser = USERS[2];
   }
 
-  setCurrentUser(user: ActiveUser) {
+  onSelect(user: ActiveUser) {
     this.selectedUser = user;
+    this._select.emit(user);
+  }
+
+  onDelete(user: ActiveUser) {
+    this.selectedUser = undefined;
+    this._delete.emit(user);
   }
 
 }

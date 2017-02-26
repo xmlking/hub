@@ -1,10 +1,10 @@
 export const environment = {
   production: true,
-  demo: false,
+  demo: true,
 
   TITLE: 'Fitness Zone',
 
-  API_BASE_URL: 'http://localhost:3000/api',
+  API_BASE_URL: 'api',
   GRAILS_BASE_URL: 'http://localhost:8080',
   WS_BASE_URL: 'http://localhost:8090',
 };

@@ -1,7 +1,8 @@
 import {Component, Inject, OnDestroy, OnInit, Renderer} from '@angular/core';
 import {DOCUMENT} from '@angular/platform-browser';
 import * as Rx from 'rxjs/Rx';
-import {TimeInterval} from 'rxjs';
+import {ActiveUser, ActiveUsersService} from './services/active-users.service';
+import {Observable} from 'rxjs/Observable';
 
 function getRandomNumber(bottom, top): number {
   return Math.floor( Math.random() * ( 1 + top - bottom ) ) + bottom;
@@ -44,9 +45,10 @@ export class DoctorComponent implements OnInit, OnDestroy {
   sub2: Rx.Subscription;
   sub3: Rx.Subscription;
   sub4: Rx.Subscription;
-  constructor(@Inject(DOCUMENT) private document: Document, private renderer: Renderer) {
-
-
+  currentUser: ActiveUser;
+  activeUsers$: Observable<ActiveUser[]>;
+  constructor(@Inject(DOCUMENT) private document: Document, private renderer: Renderer,
+              private activeUsersService: ActiveUsersService) {
     this.sub1 = this.ob.subscribe((x) => { this.random1 = x; });
     this.sub2 = this.ob.subscribe((x) => { this.random2 = x; });
     this.sub3 = this.ob.subscribe((x) => { this.random3 = x; });
@@ -55,6 +57,7 @@ export class DoctorComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.renderer.setElementClass(this.document.body, 'body-padding-3', true);
+    this.getActiveUsers();
   }
   ngOnDestroy(): void {
     this.renderer.setElementClass(this.document.body, 'body-padding-3', false);
@@ -63,5 +66,21 @@ export class DoctorComponent implements OnInit, OnDestroy {
     this.sub3.unsubscribe();
     this.sub4.unsubscribe();
   }
+
+  getActiveUsers() {
+    this.activeUsers$ = this.activeUsersService.list();
+  }
+
+  deleteUser(user: ActiveUser) {
+    this.activeUsersService.delete(user.id)
+      .then(() => {
+        console.log('deleted: ', user);
+        this.getActiveUsers();
+      });
+  };
+
+  setCurrentUser(user: ActiveUser) {
+    this.currentUser = user;
+  };
 
 }

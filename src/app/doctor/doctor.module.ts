@@ -4,6 +4,7 @@ import { SharedModule } from '../shared/shared.module';
 import { doctorRoutes } from './doctor-routing.module';
 import { DoctorComponent } from './doctor.component';
 import Components from './components';
+import { Services } from './services';
 
 @NgModule({
   imports: [
@@ -13,6 +14,9 @@ import Components from './components';
   declarations: [
     DoctorComponent,
     ...Components,
-  ]
+  ],
+  providers: [
+    ...Services,
+  ],
 })
 export class DoctorModule { }

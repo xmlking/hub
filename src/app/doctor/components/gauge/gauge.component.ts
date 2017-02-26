@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import {single} from './data';
+import {Component, Input, OnInit} from '@angular/core';
+import { single } from './data';
+import { ActiveUser } from '../../services/active-users.service';
 
 @Component({
   selector: 'app-gauge',
@@ -7,17 +8,15 @@ import {single} from './data';
   styleUrls: ['./gauge.component.scss']
 })
 export class GaugeComponent implements OnInit {
-
-  view: any[] = [700, 400];
-  data: any[];
-
-  constructor() {
-    this.data = single;
-  }
-
   colorScheme = {
     domain: ['#5AA454', '#A10A28', '#C7B42C']
   };
+  view: any[] = [700, 400];
+  data: any[];
+  @Input() user: ActiveUser;
+  constructor() {
+    this.data = single;
+  }
 
   onSelect(event) {
     console.log(event);

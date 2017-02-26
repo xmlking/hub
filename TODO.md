@@ -1,13 +1,2 @@
-use this trick
-```typescript
-constructor() {
-    Object.assign(this, {
-      single,
-      multi,
-      countries,
-      chartGroups,
-      colorSets,
-      graph: generateGraph(50),
-      bubble
-    });
-```
+Angular2 and Rxjs : a simple paginated list with search field
+ https://blog.bouzekri.net/2016-05-15-angular2-rxjs-simple-paginated-list-with-search-field

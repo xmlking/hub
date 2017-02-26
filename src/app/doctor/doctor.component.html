@@ -4,14 +4,14 @@
 
   <div class="card-columns">
 
-    <app-active-users></app-active-users>
+    <app-active-users [activeUsers]="activeUsers$ | async" (_select)="setCurrentUser($event)" (_delete)="deleteUser($event)"></app-active-users>
 
     <div class="card text-center">
       <div class="card-header">
-        User : Superman
+        User : {{currentUser?.name}}
       </div>
       <div class="card-block">
-        <h4 class="card-title">Superman HR</h4>
+        <h4 class="card-title">HR</h4>
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
       </div>
       <app-smoothie-chart
@@ -22,10 +22,10 @@
 
     <div class="card text-center">
       <div class="card-header">
-        User : Batman
+        User : {{currentUser?.name}}
       </div>
       <div class="card-block">
-        <h4 class="card-title">Batman HR</h4>
+        <h4 class="card-title">HR</h4>
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
       </div>
       <app-smoothie-chart
@@ -36,10 +36,10 @@
 
     <div class="card text-center">
       <div class="card-header">
-        User : Robin
+        User : {{currentUser?.name}}
       </div>
       <div class="card-block">
-        <h4 class="card-title">Robin HR</h4>
+        <h4 class="card-title">HR</h4>
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
       </div>
       <app-smoothie-chart
@@ -50,10 +50,10 @@
 
     <div class="card text-center">
       <div class="card-header">
-        User : BatGirl
+        User : {{currentUser?.name}}
       </div>
       <div class="card-block">
-        <h4 class="card-title">BatGirl HR</h4>
+        <h4 class="card-title">HR</h4>
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
       </div>
       <app-smoothie-chart
@@ -64,57 +64,57 @@
 
     <div class="card text-center">
       <div class="card-header">
-        User : BatGirl
+        User : {{currentUser?.name}}
       </div>
       <div class="card-block">
-        <h4 class="card-title">BatGirl HR</h4>
+        <h4 class="card-title">By Region</h4>
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
       </div>
-      <app-charts></app-charts>
+      <app-charts [user]="currentUser"></app-charts>
     </div>
 
     <div class="card text-center">
       <div class="card-header">
-        User : BatGirl
+        User : {{currentUser?.name}}
       </div>
       <div class="card-block">
-        <h4 class="card-title">BatGirl HR</h4>
+        <h4 class="card-title">Yearly</h4>
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
       </div>
-      <app-pie-grid></app-pie-grid>
+      <app-pie-grid [user]="currentUser"></app-pie-grid>
     </div>
 
     <div class="card text-center">
       <div class="card-header">
-        User : BatGirl
+        User : {{currentUser?.name}}
       </div>
       <div class="card-block">
-        <h4 class="card-title">BatGirl HR</h4>
+        <h4 class="card-title">Total by Region</h4>
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
       </div>
-      <app-tree-map></app-tree-map>
+      <app-tree-map [user]="currentUser"></app-tree-map>
     </div>
 
     <div class="card text-center">
       <div class="card-header">
-        User : BatGirl
+        User : {{currentUser?.name}}
       </div>
       <div class="card-block">
-        <h4 class="card-title">BatGirl HR</h4>
+        <h4 class="card-title">Steps</h4>
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
       </div>
-      <app-number-card></app-number-card>
+      <app-number-card [user]="currentUser"></app-number-card>
     </div>
 
     <div class="card text-center">
       <div class="card-header">
-        User : BatGirl
+        User : {{currentUser?.name}}
       </div>
       <div class="card-block">
-        <h4 class="card-title">BatGirl HR</h4>
+        <h4 class="card-title">Floors</h4>
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
       </div>
-      <app-gauge></app-gauge>
+      <app-gauge [user]="currentUser"></app-gauge>
     </div>
 
 

@@ -11,12 +11,18 @@ import {Ng2PageScrollModule} from 'ng2-page-scroll';
 import { TranslateModule } from '@ngx-translate/core';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
+import {ScrollSpyModule} from 'ng2-scrollspy';
 
 /* App */
 import Pipes from './pipes';
 import Components from './components';
-import {ScrollSpyModule} from 'ng2-scrollspy';
+import {InMemoryApiModule} from '../in-memory-api/in-memory-api.module';
+import {environment} from '../../environments/environment';
 
+const demoOnly: any[] = [];
+if (environment.demo) {
+  demoOnly.push(InMemoryApiModule);
+}
 
 @NgModule({
   imports: [CommonModule, RouterModule, NgbModule],
@@ -36,6 +42,7 @@ import {ScrollSpyModule} from 'ng2-scrollspy';
     ScrollSpyModule,
     NgxChartsModule,
     NgxDatatableModule,
+    ...demoOnly,
     ...Components,
     ...Pipes,
   ],
