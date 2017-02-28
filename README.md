@@ -33,8 +33,13 @@ Before running the tests make sure you are serving the app via `ng serve`.
 `ng serve --env=demo`
 > This will use [in-memory-data.service](src/app/in-memory-api/services/in-memory-data.service.ts)
 
-## Build for gp-pages 
-`ng build --env=demo --base-href https://xmlking.github.io/hub/`
+## Deploy to gp-pages 
+```bash 
+# build for gp-pages 
+ng build --env=demo --base-href https://xmlking.github.io/hub/
+# deploy generated `/dist` to gp-pages branch
+ngh
+```
 
 ## Further help
 

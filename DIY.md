@@ -13,7 +13,8 @@ brew install yarn
 
 # install typescript
 yarn global add typescript
-yarn global add  @angular/cli@latest
+yarn global add @angular/cli@latest
+yarn global add angular-cli-ghpages
 ng set --global packageManager=yarn
 
 
@@ -137,35 +138,3 @@ The core module contains providers for global services and can be guarded agains
 
 shared module - This is mostly for convenience where several modules are exported so they can be made available at once in components that want to use them all (common pipes, components, and directives you probably want to use together in many other moduls).
 
-JWT?
-http://angularjs.blogspot.com/2016/11/easy-angular-authentication-with-json.html
-https://github.com/auth0-blog/angular2-tour-of-heroes
-https://github.com/ronzeidman/ng2-ui-auth-example/blob/master/client/src/components/signup.component.ts
-
-TODO
-http://demo.themestreet.net/berliner/gold/index.html
-https://mdbootstrap.com/freebies/
-https://mdbootstrap.com/full-page-background-image/
-marketing content 
-http://www.quicklogic.com/solutions/catalog-cssps/s1-wearables-sensor-hub/
-
-graphs
-https://github.com/swimlane/ngx-charts
-
-wow 
-http://asktoanswer.com/questions/how-to-use-wow-js-in-angular-2-webpack/
- npm install wow.js
- https://github.com/timmyg/mary-tim-wedding-webapp
- https://github.com/tinesoft/ng2-scrollreveal
- parallax
- https://github.com/ng2-ui/ng2-parallax-scroll
-scroll spy ecample https://github.com/dshybeka/buildka
-
-Meterial CSS
-https://github.com/BafS/Kaudio-frontend/blob/master/src/styles.scss
-
-Bluetooth
-https://github.com/urish/ng-beacon-app/blob/master/src/app/ble-uart.service.ts
-https://github.com/urish/hot-or-not/blob/master/src/app/environmental-sensing.service.ts
-
-https://github.com/oroce/polar-h7-rr-phone/tree/master
