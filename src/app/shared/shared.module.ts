@@ -12,16 +12,16 @@ import { TranslateModule } from '@ngx-translate/core';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import {ScrollSpyModule} from 'ng2-scrollspy';
+import {InMemoryWebApiModule} from 'angular-in-memory-web-api';
 
 /* App */
 import Pipes from './pipes';
 import Components from './components';
-import {InMemoryApiModule} from '../in-memory-api/in-memory-api.module';
-import {environment} from '../../environments/environment';
+import { environment } from '../../environments/environment';
 
-const demoOnly: any[] = [];
+const forSharedModuleDemoEnvOnly: any[] = [];
 if (environment.demo) {
-  demoOnly.push(InMemoryApiModule);
+  forSharedModuleDemoEnvOnly.push(InMemoryWebApiModule);
 }
 
 @NgModule({
@@ -42,7 +42,7 @@ if (environment.demo) {
     ScrollSpyModule,
     NgxChartsModule,
     NgxDatatableModule,
-    ...demoOnly,
+    ...forSharedModuleDemoEnvOnly,
     ...Components,
     ...Pipes,
   ],

@@ -1,6 +1,6 @@
 webpackJsonp([2,12],{
 
-/***/ 1191:
+/***/ 1190:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -39,8 +39,8 @@ var HomeComponent = (function () {
 HomeComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-home',
-        template: __webpack_require__(1290),
-        styles: [__webpack_require__(1263)]
+        template: __webpack_require__(1289),
+        styles: [__webpack_require__(1262)]
     }),
     __param(0, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Inject"])(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["DOCUMENT"])),
     __metadata("design:paramtypes", [Object, typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["Renderer"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["Renderer"]) === "function" && _a || Object])
@@ -51,7 +51,7 @@ var _a;
 
 /***/ }),
 
-/***/ 1233:
+/***/ 1232:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -77,8 +77,8 @@ var FooterComponent = (function () {
 FooterComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-home-footer',
-        template: __webpack_require__(1288),
-        styles: [__webpack_require__(1261)]
+        template: __webpack_require__(1287),
+        styles: [__webpack_require__(1260)]
     }),
     __metadata("design:paramtypes", [])
 ], FooterComponent);
@@ -87,7 +87,7 @@ FooterComponent = __decorate([
 
 /***/ }),
 
-/***/ 1234:
+/***/ 1233:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -142,8 +142,8 @@ var HeaderComponent = (function () {
 HeaderComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-home-header',
-        template: __webpack_require__(1289),
-        styles: [__webpack_require__(1262)],
+        template: __webpack_require__(1288),
+        styles: [__webpack_require__(1261)],
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__ngrx_store__["e" /* Store */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ngrx_store__["e" /* Store */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__core_modal_modal_actions__["a" /* ModalActions */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__core_modal_modal_actions__["a" /* ModalActions */]) === "function" && _c || Object])
 ], HeaderComponent);
@@ -153,12 +153,12 @@ var _a, _b, _c;
 
 /***/ }),
 
-/***/ 1235:
+/***/ 1234:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__header_header_component__ = __webpack_require__(1234);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__footer_footer_component__ = __webpack_require__(1233);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__header_header_component__ = __webpack_require__(1233);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__footer_footer_component__ = __webpack_require__(1232);
 
 
 /* harmony default export */ __webpack_exports__["a"] = [
@@ -169,12 +169,12 @@ var _a, _b, _c;
 
 /***/ }),
 
-/***/ 1236:
+/***/ 1235:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_router__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__home_component__ = __webpack_require__(1191);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__home_component__ = __webpack_require__(1190);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return homeRoutes; });
 
 
@@ -198,7 +198,7 @@ var homeRoutes = __WEBPACK_IMPORTED_MODULE_0__angular_router__["a" /* RouterModu
 
 /***/ }),
 
-/***/ 1261:
+/***/ 1260:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(12)();
@@ -216,7 +216,7 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 1262:
+/***/ 1261:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(12)();
@@ -234,7 +234,7 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 1263:
+/***/ 1262:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(12)();
@@ -242,7 +242,7 @@ exports = module.exports = __webpack_require__(12)();
 
 
 // module
-exports.push([module.i, ":host /deep/ {\n  /* header\n  -------------------------------------------------- */\n  /* video-background\n  -------------------------------------------------- */\n  /* form-control\n  -------------------------------------------------- */\n  /* feature\n  -------------------------------------------------- */\n  /* gallery-box\n  -------------------------------------------------- */\n  /* no-gutter\n  -------------------------------------------------- */\n  /* btn\n  -------------------------------------------------- */ }\n  :host /deep/ hr {\n    max-width: 120px;\n    border-width: 3px;\n    opacity: 0.08;\n    margin-top: 25px;\n    margin-bottom: 25px; }\n    :host /deep/ hr.light {\n      border-color: #fff;\n      opacity: 0.10; }\n    :host /deep/ hr.primary {\n      border-color: #007FFF; }\n  :host /deep/ a {\n    color: #9c27b0;\n    -webkit-transition: all .35s;\n    transition: all .35s; }\n    :host /deep/ a:hover, :host /deep/ a:focus {\n      color: #9c27c1;\n      outline: 0; }\n  :host /deep/ h1, :host /deep/ h2, :host /deep/ h3, :host /deep/ h4, :host /deep/ h5, :host /deep/ h6 {\n    font-family: 'Questrial', 'Helvetica Neue', Arial, sans-serif; }\n  :host /deep/ p {\n    font-size: 17px;\n    line-height: 1.7;\n    margin-bottom: 20px; }\n  :host /deep/ .wide-space {\n    letter-spacing: 1.6px; }\n  :host /deep/ .icon-lg {\n    font-size: 50px;\n    line-height: 18px; }\n  :host /deep/ .bg-primary {\n    background-color: #333 !important; }\n  :host /deep/ .bg-dark {\n    color: #eee;\n    background-color: #222; }\n  :host /deep/ .cursive {\n    font-family: 'Dancing Script', cursive;\n    text-transform: none; }\n  :host /deep/ .text-faded {\n    color: rgba(245, 245, 245, 0.7); }\n  :host /deep/ .text-dark {\n    color: #111; }\n  :host /deep/ .text-primary {\n    color: #9c27b0 !important; }\n  :host /deep/ .modal-content {\n    background-color: #1d1d1d; }\n  :host /deep/ section {\n    padding: 70px 0; }\n  :host /deep/ aside {\n    padding: 50px 0; }\n  :host /deep/ .no-padding {\n    padding: 0; }\n  :host /deep/ header {\n    position: relative;\n    min-height: auto;\n    text-align: center;\n    color: #fff;\n    width: 100%;\n    background-color: #c9c9c9;\n    background-image: url(" + __webpack_require__(1293) + ");\n    background-position: center;\n    background-size: cover;\n    -o-background-size: cover; }\n    :host /deep/ header .header-content {\n      position: relative;\n      width: 100%;\n      padding: 100px 15px;\n      text-align: center;\n      z-index: 2; }\n      :host /deep/ header .header-content .inner h1 {\n        margin-top: 0;\n        margin-bottom: 0; }\n      :host /deep/ header .header-content .inner p {\n        margin-bottom: 50px;\n        font-size: 16px;\n        font-weight: 300;\n        color: rgba(255, 255, 255, 0.7); }\n  @media (min-width: 768px) {\n    :host /deep/ .icon-lg {\n      font-size: 80px; }\n    :host /deep/ header {\n      min-height: 100%; }\n      :host /deep/ header .header-content {\n        position: absolute;\n        top: 50%;\n        padding: 0 50px;\n        -webkit-transform: translateY(-50%);\n                transform: translateY(-50%); }\n        :host /deep/ header .header-content .inner {\n          margin-right: auto;\n          margin-left: auto;\n          max-width: 1000px; }\n          :host /deep/ header .header-content .inner h1 {\n            font-size: 53px; }\n          :host /deep/ header .header-content .inner p {\n            margin-right: auto;\n            margin-left: auto;\n            max-width: 80%;\n            font-size: 18px; }\n    :host /deep/ section {\n      min-height: 600px; } }\n  :host /deep/ #video-background {\n    position: absolute;\n    right: 0;\n    bottom: 0;\n    min-width: 100%;\n    min-height: 100%;\n    width: auto;\n    height: auto;\n    z-index: 1; }\n    :host /deep/ #video-background .collapsing {\n      display: none; }\n  :host /deep/ .form-control {\n    color: #eee;\n    background-color: #36333d; }\n    :host /deep/ .form-control:focus {\n      color: #222;\n      background-color: #ccc; }\n  :host /deep/ textarea {\n    resize: none; }\n  :host /deep/ .margin-top-0 {\n    margin-top: 0; }\n  :host /deep/ .feature {\n    margin: 50px auto 0;\n    max-width: 400px; }\n    :host /deep/ .feature p {\n      margin-bottom: 0; }\n  @media (min-width: 992px) {\n    :host /deep/ .feature {\n      margin: 20px auto 0; } }\n  :host /deep/ .call-to-action h2 {\n    margin: 0 auto 20px; }\n  :host /deep/ .gallery-box {\n    display: block;\n    position: relative;\n    margin: 0 auto;\n    max-width: 650px;\n    overflow: hidden; }\n    :host /deep/ .gallery-box .gallery-box-caption {\n      display: block;\n      position: absolute;\n      bottom: 0;\n      width: 100%;\n      height: 100%;\n      text-align: center;\n      color: #fff;\n      opacity: 0;\n      background: rgba(44, 44, 44, 0.8);\n      -webkit-transition: all .35s;\n      transition: all .35s; }\n      :host /deep/ .gallery-box .gallery-box-caption .gallery-box-content {\n        position: absolute;\n        top: 50%;\n        width: 100%;\n        text-align: center;\n        -webkit-transform: translateY(-50%);\n                transform: translateY(-50%); }\n    :host /deep/ .gallery-box:hover .gallery-box-caption {\n      opacity: 1; }\n    :host /deep/ .gallery-box:hover img {\n      -webkit-transform: scale(1.1);\n      transform: scale(1.1); }\n    :host /deep/ .gallery-box img {\n      -webkit-transition: all 300ms ease-in-out;\n      transition: all 300ms ease-in-out; }\n  :host /deep/ .no-gutter > [class*=col-] {\n    padding-right: 0;\n    padding-left: 0; }\n  :host /deep/ .btn {\n    border: 0;\n    border-radius: 290px;\n    font-family: 'Helvetica Neue', Arial, sans-serif; }\n    :host /deep/ .btn.btn-primary {\n      background-color: transparent;\n      border: 1px solid #f0f0f0;\n      -webkit-transition: all .35s;\n      transition: all .35s; }\n      :host /deep/ .btn.btn-primary:hover {\n        opacity: 0.7; }\n  :host /deep/ .btn-xl {\n    padding: 15px 30px;\n    font-size: 20px; }\n  :host /deep/ ::-moz-selection, :host /deep/ ::-moz-selection {\n    text-shadow: none;\n    color: #fff;\n    background: #222; }\n  :host /deep/ ::-moz-selection, :host /deep/ ::selection {\n    text-shadow: none;\n    color: #fff;\n    background: #222; }\n  :host /deep/ img::-moz-selection, :host /deep/ img::-moz-selection {\n    color: #fff;\n    background: 0 0; }\n  :host /deep/ img::selection, :host /deep/ img::-moz-selection {\n    color: #fff;\n    background: 0 0; }\n", ""]);
+exports.push([module.i, ":host /deep/ {\n  /* header\n  -------------------------------------------------- */\n  /* video-background\n  -------------------------------------------------- */\n  /* form-control\n  -------------------------------------------------- */\n  /* feature\n  -------------------------------------------------- */\n  /* gallery-box\n  -------------------------------------------------- */\n  /* no-gutter\n  -------------------------------------------------- */\n  /* btn\n  -------------------------------------------------- */ }\n  :host /deep/ hr {\n    max-width: 120px;\n    border-width: 3px;\n    opacity: 0.08;\n    margin-top: 25px;\n    margin-bottom: 25px; }\n    :host /deep/ hr.light {\n      border-color: #fff;\n      opacity: 0.10; }\n    :host /deep/ hr.primary {\n      border-color: #007FFF; }\n  :host /deep/ a {\n    color: #9c27b0;\n    -webkit-transition: all .35s;\n    transition: all .35s; }\n    :host /deep/ a:hover, :host /deep/ a:focus {\n      color: #9c27c1;\n      outline: 0; }\n  :host /deep/ h1, :host /deep/ h2, :host /deep/ h3, :host /deep/ h4, :host /deep/ h5, :host /deep/ h6 {\n    font-family: 'Questrial', 'Helvetica Neue', Arial, sans-serif; }\n  :host /deep/ p {\n    font-size: 17px;\n    line-height: 1.7;\n    margin-bottom: 20px; }\n  :host /deep/ .wide-space {\n    letter-spacing: 1.6px; }\n  :host /deep/ .icon-lg {\n    font-size: 50px;\n    line-height: 18px; }\n  :host /deep/ .bg-primary {\n    background-color: #333 !important; }\n  :host /deep/ .bg-dark {\n    color: #eee;\n    background-color: #222; }\n  :host /deep/ .cursive {\n    font-family: 'Dancing Script', cursive;\n    text-transform: none; }\n  :host /deep/ .text-faded {\n    color: rgba(245, 245, 245, 0.7); }\n  :host /deep/ .text-dark {\n    color: #111; }\n  :host /deep/ .text-primary {\n    color: #9c27b0 !important; }\n  :host /deep/ .modal-content {\n    background-color: #1d1d1d; }\n  :host /deep/ section {\n    padding: 70px 0; }\n  :host /deep/ aside {\n    padding: 50px 0; }\n  :host /deep/ .no-padding {\n    padding: 0; }\n  :host /deep/ header {\n    position: relative;\n    min-height: auto;\n    text-align: center;\n    color: #fff;\n    width: 100%;\n    background-color: #c9c9c9;\n    background-image: url(" + __webpack_require__(1292) + ");\n    background-position: center;\n    background-size: cover;\n    -o-background-size: cover; }\n    :host /deep/ header .header-content {\n      position: relative;\n      width: 100%;\n      padding: 100px 15px;\n      text-align: center;\n      z-index: 2; }\n      :host /deep/ header .header-content .inner h1 {\n        margin-top: 0;\n        margin-bottom: 0; }\n      :host /deep/ header .header-content .inner p {\n        margin-bottom: 50px;\n        font-size: 16px;\n        font-weight: 300;\n        color: rgba(255, 255, 255, 0.7); }\n  @media (min-width: 768px) {\n    :host /deep/ .icon-lg {\n      font-size: 80px; }\n    :host /deep/ header {\n      min-height: 100%; }\n      :host /deep/ header .header-content {\n        position: absolute;\n        top: 50%;\n        padding: 0 50px;\n        -webkit-transform: translateY(-50%);\n                transform: translateY(-50%); }\n        :host /deep/ header .header-content .inner {\n          margin-right: auto;\n          margin-left: auto;\n          max-width: 1000px; }\n          :host /deep/ header .header-content .inner h1 {\n            font-size: 53px; }\n          :host /deep/ header .header-content .inner p {\n            margin-right: auto;\n            margin-left: auto;\n            max-width: 80%;\n            font-size: 18px; }\n    :host /deep/ section {\n      min-height: 600px; } }\n  :host /deep/ #video-background {\n    position: absolute;\n    right: 0;\n    bottom: 0;\n    min-width: 100%;\n    min-height: 100%;\n    width: auto;\n    height: auto;\n    z-index: 1; }\n    :host /deep/ #video-background .collapsing {\n      display: none; }\n  :host /deep/ .form-control {\n    color: #eee;\n    background-color: #36333d; }\n    :host /deep/ .form-control:focus {\n      color: #222;\n      background-color: #ccc; }\n  :host /deep/ textarea {\n    resize: none; }\n  :host /deep/ .margin-top-0 {\n    margin-top: 0; }\n  :host /deep/ .feature {\n    margin: 50px auto 0;\n    max-width: 400px; }\n    :host /deep/ .feature p {\n      margin-bottom: 0; }\n  @media (min-width: 992px) {\n    :host /deep/ .feature {\n      margin: 20px auto 0; } }\n  :host /deep/ .call-to-action h2 {\n    margin: 0 auto 20px; }\n  :host /deep/ .gallery-box {\n    display: block;\n    position: relative;\n    margin: 0 auto;\n    max-width: 650px;\n    overflow: hidden; }\n    :host /deep/ .gallery-box .gallery-box-caption {\n      display: block;\n      position: absolute;\n      bottom: 0;\n      width: 100%;\n      height: 100%;\n      text-align: center;\n      color: #fff;\n      opacity: 0;\n      background: rgba(44, 44, 44, 0.8);\n      -webkit-transition: all .35s;\n      transition: all .35s; }\n      :host /deep/ .gallery-box .gallery-box-caption .gallery-box-content {\n        position: absolute;\n        top: 50%;\n        width: 100%;\n        text-align: center;\n        -webkit-transform: translateY(-50%);\n                transform: translateY(-50%); }\n    :host /deep/ .gallery-box:hover .gallery-box-caption {\n      opacity: 1; }\n    :host /deep/ .gallery-box:hover img {\n      -webkit-transform: scale(1.1);\n      transform: scale(1.1); }\n    :host /deep/ .gallery-box img {\n      -webkit-transition: all 300ms ease-in-out;\n      transition: all 300ms ease-in-out; }\n  :host /deep/ .no-gutter > [class*=col-] {\n    padding-right: 0;\n    padding-left: 0; }\n  :host /deep/ .btn {\n    border: 0;\n    border-radius: 290px;\n    font-family: 'Helvetica Neue', Arial, sans-serif; }\n    :host /deep/ .btn.btn-primary {\n      background-color: transparent;\n      border: 1px solid #f0f0f0;\n      -webkit-transition: all .35s;\n      transition: all .35s; }\n      :host /deep/ .btn.btn-primary:hover {\n        opacity: 0.7; }\n  :host /deep/ .btn-xl {\n    padding: 15px 30px;\n    font-size: 20px; }\n  :host /deep/ ::-moz-selection, :host /deep/ ::-moz-selection {\n    text-shadow: none;\n    color: #fff;\n    background: #222; }\n  :host /deep/ ::-moz-selection, :host /deep/ ::selection {\n    text-shadow: none;\n    color: #fff;\n    background: #222; }\n  :host /deep/ img::-moz-selection, :host /deep/ img::-moz-selection {\n    color: #fff;\n    background: 0 0; }\n  :host /deep/ img::selection, :host /deep/ img::-moz-selection {\n    color: #fff;\n    background: 0 0; }\n", ""]);
 
 // exports
 
@@ -252,44 +252,44 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 1288:
+/***/ 1287:
 /***/ (function(module, exports) {
 
 module.exports = "<footer>\n  <div class=\"container-fluid\">\n    <div class=\"row\">\n      <div class=\"col-6 col-sm-3 column\">\n        <h4>Information</h4>\n        <ul class=\"list-unstyled\">\n          <li><a pageScroll href=\"#one\">Products</a></li>\n          <li><a pageScroll href=\"#one\">Services</a></li>\n          <li><a pageScroll href=\"#one\">Benefits</a></li>\n          <li><a pageScroll href=\"#one\">Developers</a></li>\n        </ul>\n      </div>\n      <div class=\"col-6 col-sm-3 column\">\n        <h4>About</h4>\n        <ul class=\"list-unstyled\">\n          <li><a pageScroll href=\"#one\">Contact Us</a></li>\n          <li><a pageScroll href=\"#one\">Delivery Information</a></li>\n          <li><a pageScroll href=\"#one\">Privacy Policy</a></li>\n          <li><a pageScroll href=\"#one\">Terms &amp; Conditions</a></li>\n        </ul>\n      </div>\n      <div class=\"col-12 col-sm-3 column\">\n        <h4>Stay Posted</h4>\n        <form>\n          <div class=\"form-group\">\n            <input type=\"text\" class=\"form-control\" title=\"No spam, we promise!\" placeholder=\"Tell us your email\">\n          </div>\n          <div class=\"form-group\">\n            <button class=\"btn btn-primary\" data-toggle=\"modal\" data-target=\"#alertModal\" type=\"button\">Subscribe for updates</button>\n          </div>\n        </form>\n      </div>\n      <div class=\"col-12 col-sm-3 text-right\">\n        <h4>Follow</h4>\n        <ul class=\"list-inline\">\n          <li class=\"list-inline-item\"><a rel=\"nofollow\" href=\"\" title=\"Twitter\"><i class=\"icon-lg ion-social-twitter-outline\"></i></a>&nbsp;</li>\n          <li class=\"list-inline-item\"><a rel=\"nofollow\" href=\"\" title=\"Facebook\"><i class=\"icon-lg ion-social-facebook-outline\"></i></a>&nbsp;</li>\n          <li class=\"list-inline-item\"><a rel=\"nofollow\" href=\"\" title=\"Dribble\"><i class=\"icon-lg ion-social-dribbble-outline\"></i></a></li>\n        </ul>\n      </div>\n    </div>\n    <br/>\n    <span class=\"float-right text-muted small\"><a href=\"https://twitter.com/xmlking\">Made by Sumo</a> ©2015-2017 Company</span>\n  </div>\n</footer>\n"
 
 /***/ }),
 
-/***/ 1289:
+/***/ 1288:
 /***/ (function(module, exports) {
 
 module.exports = "<nav id=\"topNav\" class=\"navbar fixed-top navbar-toggleable-md navbar-inverse\">\n  <!--[if lt IE 10]>\n  <p class=\"browsehappy\">You are using an <strong>outdated</strong> browser. Please <a\n    href=\"http://browsehappy.com/\">upgrade your browser</a> to improve your experience.</p>\n  <![endif]-->\n    <button (click)=\"isCollapsed = !isCollapsed\" class=\"navbar-toggler navbar-toggler-right hidden-lg-up\" type=\"button\">\n      <span class=\"navbar-toggler-icon\"></span>\n    </button>\n    <a pageScroll class=\"navbar-brand\" routerLink=\"/home\" fragment=\"first\" href=\"#first\"><i class=\"ion-ios-analytics-outline\"></i> {{title}}</a>\n\n    <div class=\"collapse navbar-collapse\" [ngbCollapse]=\"isCollapsed\">\n\n      <div class=\"navbar-nav mr-auto\">\n        <!-- FIXME: https://github.com/angular/angular/issues/13205 -->\n        <!-- <a pageScroll class=\"nav-item nav-link\"  routerLinkActive=\"active\" [routerLinkActiveOptions]=\"{ exact: true }\" routerLink=\"/home\" fragment=\"one\" href=\"#one\">Intro</a>-->\n        <a pageScroll class=\"nav-item nav-link\" routerLink=\"/home\" fragment=\"one\" href=\"#one\" (click)=\"collapseNav()\">Intro</a>\n        <a pageScroll class=\"nav-item nav-link\" routerLink=\"/home\" fragment=\"two\" href=\"#two\" (click)=\"collapseNav()\">Highlights</a>\n        <a pageScroll class=\"nav-item nav-link\" routerLink=\"/home\" fragment=\"three\" href=\"#three\" (click)=\"collapseNav()\">Gallery</a>\n        <a pageScroll class=\"nav-item nav-link\" routerLink=\"/home\" fragment=\"four\" href=\"#four\" (click)=\"collapseNav()\">Features</a>\n        <a pageScroll class=\"nav-item nav-link\" routerLink=\"/home\" fragment=\"last\" href=\"#last\" (click)=\"collapseNav()\">Contact</a>\n      </div>\n\n      <div class=\"navbar-nav\">\n        <a class=\"nav-item nav-link\" (click)=\"openLogin()\">Sign in</a>\n        <a class=\"nav-item nav-link\" (click)=\"openSignup()\">Sign up</a>\n      </div>\n\n      <div class=\"navbar-nav\">\n        <a class=\"nav-item nav-link\" routerLinkActive=\"active\" routerLink=\"/home/blog\" (click)=\"collapseNav()\">Blog</a>\n        <a class=\"nav-item nav-link\" routerLinkActive=\"active\" routerLink=\"/home/about\" (click)=\"collapseNav()\">{{'ABOUT' | translate}}</a>\n      </div>\n\n    </div>\n</nav>\n\n\n"
 
 /***/ }),
 
-/***/ 1290:
+/***/ 1289:
 /***/ (function(module, exports) {
 
 module.exports = "<app-home-header></app-home-header>\n<router-outlet></router-outlet>\n<app-home-footer></app-home-footer>\n"
 
 /***/ }),
 
-/***/ 1293:
+/***/ 1292:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "3.817451bf73804c275d4f.jpg";
 
 /***/ }),
 
-/***/ 932:
+/***/ 931:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_shared_module__ = __webpack_require__(199);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_component__ = __webpack_require__(1191);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components__ = __webpack_require__(1235);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__home_routing_module__ = __webpack_require__(1236);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_component__ = __webpack_require__(1190);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components__ = __webpack_require__(1234);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__home_routing_module__ = __webpack_require__(1235);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomeModule", function() { return HomeModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;

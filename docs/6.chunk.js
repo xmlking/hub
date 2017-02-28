@@ -1,13 +1,13 @@
 webpackJsonp([6,12],{
 
-/***/ 1179:
+/***/ 1178:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "bg-header.663c0a406a7d71e24dd6.jpg";
 
 /***/ }),
 
-/***/ 1189:
+/***/ 1188:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -46,8 +46,8 @@ var AboutComponent = (function () {
 AboutComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-about',
-        template: __webpack_require__(1286),
-        styles: [__webpack_require__(1259)]
+        template: __webpack_require__(1285),
+        styles: [__webpack_require__(1258)]
     }),
     __param(0, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Inject"])(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["DOCUMENT"])),
     __metadata("design:paramtypes", [Object, typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["Renderer"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["Renderer"]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["Title"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["Title"]) === "function" && _b || Object])
@@ -58,12 +58,12 @@ var _a, _b;
 
 /***/ }),
 
-/***/ 1231:
+/***/ 1230:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_router__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__about_component__ = __webpack_require__(1189);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__about_component__ = __webpack_require__(1188);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return aboutRoutes; });
 
 
@@ -74,7 +74,7 @@ var aboutRoutes = __WEBPACK_IMPORTED_MODULE_0__angular_router__["a" /* RouterMod
 
 /***/ }),
 
-/***/ 1259:
+/***/ 1258:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(12)();
@@ -82,7 +82,7 @@ exports = module.exports = __webpack_require__(12)();
 
 
 // module
-exports.push([module.i, ".about-header {\n  text-align: center;\n  background: url(" + __webpack_require__(1179) + ") no-repeat center center scroll;\n  color: #fff;\n  background-size: cover;\n  -o-background-size: cover;\n  padding: 100px 0; }\n  .about-header .header-content h1 {\n    font-size: 53px;\n    text-transform: uppercase; }\n", ""]);
+exports.push([module.i, ".about-header {\n  text-align: center;\n  background: url(" + __webpack_require__(1178) + ") no-repeat center center scroll;\n  color: #fff;\n  background-size: cover;\n  -o-background-size: cover;\n  padding: 100px 0; }\n  .about-header .header-content h1 {\n    font-size: 53px;\n    text-transform: uppercase; }\n", ""]);
 
 // exports
 
@@ -92,22 +92,22 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 1286:
+/***/ 1285:
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"about-header\" (onVisibilityChange)=\"changeNav($event)\" [scrollSpyViewport]=\"{cushion:-78}\">\n  <div class=\"header-content\">\n    <div class=\"container\">\n      <h1>Welcome to Fitness</h1>\n      <hr>\n      <p>All of the sample layouts are included with your download. Select an example layout below to preview!</p>\n    </div>\n  </div>\n</div>\n\n<div class=\"container\">\n  <div class=\"jumbotron\">\n    <h1>About Page</h1>\n  </div>\n</div>\n"
 
 /***/ }),
 
-/***/ 930:
+/***/ 929:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_shared_module__ = __webpack_require__(199);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__about_component__ = __webpack_require__(1189);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__about_routing_module__ = __webpack_require__(1231);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__about_component__ = __webpack_require__(1188);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__about_routing_module__ = __webpack_require__(1230);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AboutModule", function() { return AboutModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
