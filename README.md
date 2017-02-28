@@ -31,7 +31,7 @@ Before running the tests make sure you are serving the app via `ng serve`.
 
 ## Development server with demo env
 `ng serve --env=demo`
-> This will use [in-memory-data.service](src/app/in-memory-api/services/in-memory-data.service.ts)
+> This will use [in-memory-data.service](src/app/core/services/in-memory-data.service.ts)
 
 ## Deploy to gp-pages 
 ```bash 
