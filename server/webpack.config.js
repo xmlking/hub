@@ -1,27 +1,36 @@
-var path = require('path');
-var webpack = require('webpack');
-var node_externals = require('webpack-node-externals');
+let path = require('path');
 
 module.exports = {
-  entry: './src/index.ts',
-  target: 'node',
-  externals: [node_externals()],
-  output: {
-    path: path.resolve(__dirname, './bin'),
-    publicPath: '/bin/',
-    filename: 'index.js'
-  },
-  module: {
-    loaders: [
-      {
-        test: /\.tsx?$/, loader: 'ts-loader',
-        exclude: /(node_modules|bower_components)/
-      },
-      {test: /\.json$/, loader: 'json'}
+
+  entry: {
+    main: './src/index',
+    vendor: [
+      'koa',
+      'routing-controllers',
+      'socket-controllers',
+      'typedi',
+      'express'
     ]
   },
-  devtool: 'source-map',
+
+  output: {
+    path: path.resolve(__dirname, './dist/build'),
+    filename: '[name].bundle.js'
+  },
+
+  module: {
+    rules: [
+      { test: /\.ts$/, use: 'ts-loader' }
+    ]
+  },
+
   resolve: {
-    extensions: ['', '.webpack.js', '.web.js', '.ts', '.js']
-  }
+    modules: [
+      'node_modules',
+      path.resolve(__dirname, 'src')
+    ],
+    extensions: ['.ts', '.js']
+  },
+  target: "node",
+  devtool: false
 }
