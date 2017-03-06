@@ -253,5 +253,42 @@
       "Close": 441.2,
       "Volume": "3,919,943.89"
     }
+  ],
+  "persons": [
+    {
+      "id": 1,
+      "firstName": "Tom",
+      "lastName": "Wilson",
+      "email": "tom@jackhq.com",
+      "phone": "8434695856"
+    },
+    {
+      "id": 2,
+      "firstName": "Trey",
+      "lastName": "Wilson",
+      "email": "trey2@gmail.com",
+      "phone": "8881234545"
+    },
+    {
+      "id": 3,
+      "firstName": "Lyda",
+      "lastName": "Wilson",
+      "email": "lyda@foo.com",
+      "phone": "888123409"
+    }
+  ],
+  "locations": [
+    {
+      "id": 1,
+      "name": "Mount Pleasant, SC",
+      "lat": 32.8323,
+      "long": -79.8284
+    },
+    {
+      "id": 2,
+      "name": "San Francisco, CA",
+      "lat": "1",
+      "long": "2"
+    }
   ]
 }
