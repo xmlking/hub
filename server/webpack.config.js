@@ -3,13 +3,13 @@ var webpack = require('webpack');
 var node_externals = require('webpack-node-externals');
 
 module.exports = {
-  entry: './app.ts',
+  entry: './src/index.ts',
   target: 'node',
   externals: [node_externals()],
   output: {
     path: path.resolve(__dirname, './bin'),
     publicPath: '/bin/',
-    filename: 'app.js'
+    filename: 'index.js'
   },
   module: {
     loaders: [
