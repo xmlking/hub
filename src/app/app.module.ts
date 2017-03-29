@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
 import { StoreModule } from '@ngrx/store';
@@ -21,7 +22,7 @@ import { AuthModule } from './auth/auth.module';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import {Http} from '@angular/http';
-import {InMemoryWebApiModule} from 'angular-in-memory-web-api';
+import {InMemoryBackendConfigArgs, InMemoryWebApiModule} from 'angular-in-memory-web-api';
 import {InMemoryDataService} from './core/services/in-memory-data.service';
 import { environment } from '../environments/environment';
 
@@ -34,7 +35,7 @@ export function HttpLoaderFactory(http: Http) {
 const forAppModuleDemoEnvOnly: any[] = [];
 if (environment.demo) {
   forAppModuleDemoEnvOnly.push(
-    InMemoryWebApiModule.forRoot(InMemoryDataService, {
+    InMemoryWebApiModule.forRoot(InMemoryDataService, <InMemoryBackendConfigArgs>{
       passThruUnknownUrl: true,
       // delay: 500,
       // apiBase: 'api'
@@ -48,6 +49,7 @@ if (environment.demo) {
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     NgbModule.forRoot(),
     ToastyModule.forRoot(),
     ScrollSpyModule.forRoot(),

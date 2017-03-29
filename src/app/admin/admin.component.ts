@@ -1,10 +1,13 @@
 import {Component, Inject, OnDestroy, OnInit, Renderer} from '@angular/core';
 import {DOCUMENT} from '@angular/platform-browser';
+import {routerTransition} from '../app.animations';
 
 @Component({
   selector: 'app-admin',
   templateUrl: './admin.component.html',
-  styleUrls: ['./admin.component.scss']
+  styleUrls: ['./admin.component.scss'],
+  animations: [routerTransition()],
+  host: {'[@routerTransition]': ''}
 })
 export class AdminComponent implements OnInit, OnDestroy {
 
