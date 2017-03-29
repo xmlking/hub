@@ -1,12 +1,12 @@
 webpackJsonp([3,12],{
 
-/***/ 1182:
+/***/ 1203:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(31);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AdminComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(15);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomeComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -21,61 +21,84 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 };
 
 
-var AdminComponent = (function () {
-    function AdminComponent(document, renderer) {
+var HomeComponent = (function () {
+    function HomeComponent(document, renderer) {
         this.document = document;
         this.renderer = renderer;
     }
-    AdminComponent.prototype.ngOnInit = function () {
-        this.renderer.setElementClass(this.document.body, 'body-padding-3', true);
+    HomeComponent.prototype.ngOnInit = function () {
+        this.renderer.setElementClass(this.document.documentElement, 'landing-html-class', true);
+        this.renderer.setElementClass(this.document.body, 'landing-body-class', true);
     };
-    AdminComponent.prototype.ngOnDestroy = function () {
-        this.renderer.setElementClass(this.document.body, 'body-padding-3', false);
+    HomeComponent.prototype.ngOnDestroy = function () {
+        this.renderer.setElementClass(this.document.documentElement, 'landing-html-class', false);
+        this.renderer.setElementClass(this.document.body, 'landing-body-class', false);
     };
-    return AdminComponent;
+    return HomeComponent;
 }());
-AdminComponent = __decorate([
+HomeComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'app-admin',
-        template: __webpack_require__(1266),
-        styles: [__webpack_require__(1240)]
+        selector: 'app-home',
+        template: __webpack_require__(1303),
+        styles: [__webpack_require__(1276)]
     }),
     __param(0, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Inject"])(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["DOCUMENT"])),
     __metadata("design:paramtypes", [Object, typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["Renderer"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["Renderer"]) === "function" && _a || Object])
-], AdminComponent);
+], HomeComponent);
 
 var _a;
-//# sourceMappingURL=admin.component.js.map
+//# sourceMappingURL=home.component.js.map
 
 /***/ }),
 
-/***/ 1198:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_router__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__admin_component__ = __webpack_require__(1182);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return adminRoutes; });
-
-
-var adminRoutes = __WEBPACK_IMPORTED_MODULE_0__angular_router__["a" /* RouterModule */].forChild([
-    {
-        path: '', component: __WEBPACK_IMPORTED_MODULE_1__admin_component__["a" /* AdminComponent */]
-    }
-]);
-//# sourceMappingURL=admin-routing.module.js.map
-
-/***/ }),
-
-/***/ 1199:
+/***/ 1246:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(19);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__core_services_account_service__ = __webpack_require__(506);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ng2_toasty__ = __webpack_require__(203);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FundComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FooterComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var FooterComponent = (function () {
+    function FooterComponent() {
+    }
+    FooterComponent.prototype.ngOnInit = function () {
+    };
+    return FooterComponent;
+}());
+FooterComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-home-footer',
+        template: __webpack_require__(1301),
+        styles: [__webpack_require__(1274)]
+    }),
+    __metadata("design:paramtypes", [])
+], FooterComponent);
+
+//# sourceMappingURL=footer.component.js.map
+
+/***/ }),
+
+/***/ 1247:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngrx_store__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__core_modal_modal_actions__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__auth_login_login_component__ = __webpack_require__(101);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__auth_signup_signup_component__ = __webpack_require__(204);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__environments_environment__ = __webpack_require__(51);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HeaderComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -89,154 +112,93 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var FundComponent = (function () {
-    function FundComponent(fb, toastyService, accountService) {
-        this.fb = fb;
-        this.toastyService = toastyService;
-        this.accountService = accountService;
-        this.accounts = [];
-        this.accounts = [{ a: 'sumo1', b: 'demo1', c: 444 }, { a: 'sumo2', b: 'demo2', c: 555 }, { a: 'sumo3', b: 'demo3', c: 666 }];
+
+
+
+var HeaderComponent = (function () {
+    function HeaderComponent(router, store, modalActions) {
+        this.router = router;
+        this.store = store;
+        this.modalActions = modalActions;
+        this.title = __WEBPACK_IMPORTED_MODULE_6__environments_environment__["a" /* environment */].TITLE;
     }
-    FundComponent.prototype.ngOnInit = function () {
-        this.sendEtherForm = this.fb.group({
-            recipientAddress: ['', [__WEBPACK_IMPORTED_MODULE_1__angular_forms__["c" /* Validators */].required, __WEBPACK_IMPORTED_MODULE_1__angular_forms__["c" /* Validators */].minLength(20)]],
-            sendAmount: ['', __WEBPACK_IMPORTED_MODULE_1__angular_forms__["c" /* Validators */].required],
-        });
+    HeaderComponent.prototype.ngOnInit = function () {
+        this.isCollapsed = true;
     };
-    FundComponent.prototype.getAccountBalance = function (account) {
-        return account.c;
+    HeaderComponent.prototype.openLogin = function () {
+        this.collapseNav();
+        this.store.dispatch(this.modalActions.open({ cmpType: __WEBPACK_IMPORTED_MODULE_4__auth_login_login_component__["a" /* LoginComponent */] }));
     };
-    FundComponent.prototype.send = function (toAccount, amount, fromAddress) {
-        var _this = this;
-        if (amount === void 0) { amount = 6; }
-        if (fromAddress === void 0) { fromAddress = this.accounts[0]; }
-        console.log("toAccount: " + toAccount + ", fromAddress: " + fromAddress + ", amount: " + amount);
-        this.accountService.transfer(toAccount, fromAddress, amount)
-            .subscribe(function (result) { return _this.toastyService.warning('Transfer Initiated'); }, function (error) { return _this.toastyService.error("Hi there, bad news\n " + error.message); }, function () { return true; } // this.toastyService.info("Hi there, good news, done ")
-        );
+    HeaderComponent.prototype.openSignup = function () {
+        this.collapseNav();
+        this.store.dispatch(this.modalActions.open({ cmpType: __WEBPACK_IMPORTED_MODULE_5__auth_signup_signup_component__["a" /* SignupComponent */] }));
     };
-    return FundComponent;
+    /* TODO : always close responsive nav after click : make it nice*/
+    HeaderComponent.prototype.collapseNav = function () {
+        this.isCollapsed = true;
+    };
+    return HeaderComponent;
 }());
-FundComponent = __decorate([
+HeaderComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'app-fund',
-        template: __webpack_require__(1267),
-        styles: [__webpack_require__(1241)]
+        selector: 'app-home-header',
+        template: __webpack_require__(1302),
+        styles: [__webpack_require__(1275)],
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_forms__["d" /* FormBuilder */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_forms__["d" /* FormBuilder */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3_ng2_toasty__["b" /* ToastyService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3_ng2_toasty__["b" /* ToastyService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__core_services_account_service__["a" /* AccountService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__core_services_account_service__["a" /* AccountService */]) === "function" && _c || Object])
-], FundComponent);
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__ngrx_store__["e" /* Store */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ngrx_store__["e" /* Store */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__core_modal_modal_actions__["a" /* ModalActions */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__core_modal_modal_actions__["a" /* ModalActions */]) === "function" && _c || Object])
+], HeaderComponent);
 
 var _a, _b, _c;
-//# sourceMappingURL=fund.component.js.map
+//# sourceMappingURL=header.component.js.map
 
 /***/ }),
 
-/***/ 1200:
+/***/ 1248:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__grails_service__ = __webpack_require__(1201);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GrailsNavComponent; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var GrailsNavComponent = (function () {
-    function GrailsNavComponent(grailsService) {
-        this.grailsService = grailsService;
-    }
-    GrailsNavComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        this.grailsService.getGrailsNavData().subscribe(function (res) { return _this.applicationData = res; });
-    };
-    return GrailsNavComponent;
-}());
-GrailsNavComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'app-grails-nav',
-        template: __webpack_require__(1268),
-        styles: [__webpack_require__(1242)],
-        providers: [__WEBPACK_IMPORTED_MODULE_1__grails_service__["a" /* GrailsService */]]
-    }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__grails_service__["a" /* GrailsService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__grails_service__["a" /* GrailsService */]) === "function" && _a || Object])
-], GrailsNavComponent);
-
-var _a;
-//# sourceMappingURL=grails-nav.component.js.map
-
-/***/ }),
-
-/***/ 1201:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(36);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__(50);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GrailsService; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-var GrailsService = (function () {
-    function GrailsService(http) {
-        this.http = http;
-    }
-    GrailsService.prototype.getGrailsNavData = function () {
-        if (!this._navData) {
-            this._navData = this.http.get(__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].GRAILS_BASE_URL + "/application")
-                .map(function (res) { return res.json(); });
-        }
-        return this._navData;
-    };
-    return GrailsService;
-}());
-GrailsService = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["Http"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["Http"]) === "function" && _a || Object])
-], GrailsService);
-
-var _a;
-//# sourceMappingURL=grails.service.js.map
-
-/***/ }),
-
-/***/ 1202:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__grails_nav_grails_nav_component__ = __webpack_require__(1200);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__fund_fund_component__ = __webpack_require__(1199);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__header_header_component__ = __webpack_require__(1247);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__footer_footer_component__ = __webpack_require__(1246);
 
 
 /* harmony default export */ __webpack_exports__["a"] = [
-    __WEBPACK_IMPORTED_MODULE_0__grails_nav_grails_nav_component__["a" /* GrailsNavComponent */],
-    __WEBPACK_IMPORTED_MODULE_1__fund_fund_component__["a" /* FundComponent */],
+    __WEBPACK_IMPORTED_MODULE_0__header_header_component__["a" /* HeaderComponent */],
+    __WEBPACK_IMPORTED_MODULE_1__footer_footer_component__["a" /* FooterComponent */],
 ];
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 1240:
+/***/ 1249:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_router__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__home_component__ = __webpack_require__(1203);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return homeRoutes; });
+
+
+var homeRoutes = __WEBPACK_IMPORTED_MODULE_0__angular_router__["a" /* RouterModule */].forChild([
+    {
+        path: '', component: __WEBPACK_IMPORTED_MODULE_1__home_component__["a" /* HomeComponent */], children: [
+            {
+                path: '',
+                loadChildren: './landing/landing.module#LandingModule'
+            },
+            { path: 'blog',
+                loadChildren: './blog/blog.module#BlogModule'
+            },
+            { path: 'about',
+                loadChildren: './about/about.module#AboutModule'
+            },
+        ],
+    }
+]);
+//# sourceMappingURL=home-routing.module.js.map
+
+/***/ }),
+
+/***/ 1274:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(12)();
@@ -244,7 +206,7 @@ exports = module.exports = __webpack_require__(12)();
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, "footer {\n  padding: 25px;\n  padding-bottom: 35px;\n  background-color: #2d2d2d; }\n", ""]);
 
 // exports
 
@@ -254,7 +216,7 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 1241:
+/***/ 1275:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(12)();
@@ -262,7 +224,7 @@ exports = module.exports = __webpack_require__(12)();
 
 
 // module
-exports.push([module.i, "th {\n  background-color: mediumseagreen;\n  color: white; }\n", ""]);
+exports.push([module.i, "/* Browse Happy prompt\n-------------------------------------------------- */\n.browsehappy {\n  margin: -0.5rem -1rem 0rem;\n  background: #ccc;\n  color: #000;\n  padding: 0.2rem 0; }\n\n/* NavBar\n-------------------------------------------------- */\n.navbar {\n  border-color: rgba(35, 35, 35, 0.05);\n  font-family: 'Questrial','Helvetica Neue',Arial,sans-serif;\n  background-color: #222;\n  -webkit-transition: all .4s;\n  transition: all .4s; }\n  .navbar .navbar-brand {\n    font-family: 'Questrial','Helvetica Neue',Arial,sans-serif;\n    color: #9c27b0;\n    padding: 15px;\n    -webkit-transition: padding .2s ease-in;\n    transition: padding .2s ease-in; }\n    .navbar .navbar-brand:hover, .navbar .navbar-brand:focus {\n      color: #8b27b0; }\n  .navbar .navbar-nav > a {\n    text-transform: uppercase;\n    font-size: 13px;\n    font-weight: 700;\n    color: #eee; }\n    .navbar .navbar-nav > a:focus {\n      text-transform: uppercase;\n      font-size: 13px;\n      font-weight: 700;\n      color: #eee; }\n    .navbar .navbar-nav > a:hover, .navbar .navbar-nav > a:focus:hover {\n      color: #9c27b0; }\n  .navbar .navbar-nav .nav-link.active {\n    color: #9c27b0 !important;\n    background-color: transparent; }\n    .navbar .navbar-nav .nav-link.active:focus {\n      color: #9c27b0 !important;\n      background-color: transparent; }\n\n/* responsive nav */\n@media (min-width: 768px) {\n  .navbar {\n    border-color: transparent;\n    background-color: transparent;\n    min-height: 60px; }\n    .navbar .navbar-brand {\n      color: rgba(255, 255, 255, 0.7);\n      padding: 19px; }\n      .navbar .navbar-brand:hover, .navbar .navbar-brand:focus {\n        color: #f4f4f4; }\n    .navbar .navbar-nav > a {\n      color: rgba(255, 255, 255, 0.8);\n      padding: 20px;\n      letter-spacing: 1.1px;\n      text-shadow: 1px 1px 1px rgba(60, 60, 60, 0.7); }\n      .navbar .navbar-nav > a:focus {\n        color: rgba(255, 255, 255, 0.8);\n        padding: 20px;\n        letter-spacing: 1.1px;\n        text-shadow: 1px 1px 1px rgba(60, 60, 60, 0.7); }\n      .navbar .navbar-nav > a:hover, .navbar .navbar-nav > a:focus:hover {\n        color: #fefefe; }\n    .navbar.affix {\n      border-color: rgba(34, 34, 34, 0.05);\n      background-color: #222; }\n      .navbar.affix .navbar-brand {\n        font-size: 15px;\n        color: #9c27b0;\n        padding: 20px;\n        letter-spacing: 1px; }\n        .navbar.affix .navbar-brand:hover, .navbar.affix .navbar-brand:focus {\n          color: #8b27b0; }\n      .navbar.affix .navbar-nav > a {\n        color: #ddd;\n        text-shadow: 1px 1px 1px rgba(30, 30, 30, 0.7); }\n        .navbar.affix .navbar-nav > a:focus {\n          color: #ddd;\n          text-shadow: 1px 1px 1px rgba(30, 30, 30, 0.7); }\n        .navbar.affix .navbar-nav > a:hover, .navbar.affix .navbar-nav > a:focus:hover {\n          color: #9c27b0; } }\n", ""]);
 
 // exports
 
@@ -272,7 +234,7 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 1242:
+/***/ 1276:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(12)();
@@ -280,7 +242,7 @@ exports = module.exports = __webpack_require__(12)();
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, ":host /deep/ {\n  /* header\n  -------------------------------------------------- */\n  /* video-background\n  -------------------------------------------------- */\n  /* form-control\n  -------------------------------------------------- */\n  /* feature\n  -------------------------------------------------- */\n  /* gallery-box\n  -------------------------------------------------- */\n  /* no-gutter\n  -------------------------------------------------- */\n  /* btn\n  -------------------------------------------------- */ }\n  :host /deep/ hr {\n    max-width: 120px;\n    border-width: 3px;\n    opacity: 0.08;\n    margin-top: 25px;\n    margin-bottom: 25px; }\n    :host /deep/ hr.light {\n      border-color: #fff;\n      opacity: 0.10; }\n    :host /deep/ hr.primary {\n      border-color: #007FFF; }\n  :host /deep/ a {\n    color: #9c27b0;\n    -webkit-transition: all .35s;\n    transition: all .35s; }\n    :host /deep/ a:hover, :host /deep/ a:focus {\n      color: #9c27c1;\n      outline: 0; }\n  :host /deep/ h1, :host /deep/ h2, :host /deep/ h3, :host /deep/ h4, :host /deep/ h5, :host /deep/ h6 {\n    font-family: 'Questrial', 'Helvetica Neue', Arial, sans-serif; }\n  :host /deep/ p {\n    font-size: 17px;\n    line-height: 1.7;\n    margin-bottom: 20px; }\n  :host /deep/ .wide-space {\n    letter-spacing: 1.6px; }\n  :host /deep/ .icon-lg {\n    font-size: 50px;\n    line-height: 18px; }\n  :host /deep/ .bg-primary {\n    background-color: #333 !important; }\n  :host /deep/ .bg-dark {\n    color: #eee;\n    background-color: #222; }\n  :host /deep/ .cursive {\n    font-family: 'Dancing Script', cursive;\n    text-transform: none; }\n  :host /deep/ .text-faded {\n    color: rgba(245, 245, 245, 0.7); }\n  :host /deep/ .text-dark {\n    color: #111; }\n  :host /deep/ .text-primary {\n    color: #9c27b0 !important; }\n  :host /deep/ .modal-content {\n    background-color: #1d1d1d; }\n  :host /deep/ section {\n    padding: 70px 0; }\n  :host /deep/ aside {\n    padding: 50px 0; }\n  :host /deep/ .no-padding {\n    padding: 0; }\n  :host /deep/ header {\n    position: relative;\n    min-height: auto;\n    text-align: center;\n    color: #fff;\n    width: 100%;\n    background-color: #c9c9c9;\n    background-image: url(" + __webpack_require__(1306) + ");\n    background-position: center;\n    background-size: cover;\n    -o-background-size: cover; }\n    :host /deep/ header .header-content {\n      position: relative;\n      width: 100%;\n      padding: 100px 15px;\n      text-align: center;\n      z-index: 2; }\n      :host /deep/ header .header-content .inner h1 {\n        margin-top: 0;\n        margin-bottom: 0; }\n      :host /deep/ header .header-content .inner p {\n        margin-bottom: 50px;\n        font-size: 16px;\n        font-weight: 300;\n        color: rgba(255, 255, 255, 0.7); }\n  @media (min-width: 768px) {\n    :host /deep/ .icon-lg {\n      font-size: 80px; }\n    :host /deep/ header {\n      min-height: 100%; }\n      :host /deep/ header .header-content {\n        position: absolute;\n        top: 50%;\n        padding: 0 50px;\n        -webkit-transform: translateY(-50%);\n                transform: translateY(-50%); }\n        :host /deep/ header .header-content .inner {\n          margin-right: auto;\n          margin-left: auto;\n          max-width: 1000px; }\n          :host /deep/ header .header-content .inner h1 {\n            font-size: 53px; }\n          :host /deep/ header .header-content .inner p {\n            margin-right: auto;\n            margin-left: auto;\n            max-width: 80%;\n            font-size: 18px; }\n    :host /deep/ section {\n      min-height: 600px; } }\n  :host /deep/ #video-background {\n    position: absolute;\n    right: 0;\n    bottom: 0;\n    min-width: 100%;\n    min-height: 100%;\n    width: auto;\n    height: auto;\n    z-index: 1; }\n    :host /deep/ #video-background .collapsing {\n      display: none; }\n  :host /deep/ .form-control {\n    color: #eee;\n    background-color: #36333d; }\n    :host /deep/ .form-control:focus {\n      color: #222;\n      background-color: #ccc; }\n  :host /deep/ textarea {\n    resize: none; }\n  :host /deep/ .margin-top-0 {\n    margin-top: 0; }\n  :host /deep/ .feature {\n    margin: 50px auto 0;\n    max-width: 400px; }\n    :host /deep/ .feature p {\n      margin-bottom: 0; }\n  @media (min-width: 992px) {\n    :host /deep/ .feature {\n      margin: 20px auto 0; } }\n  :host /deep/ .call-to-action h2 {\n    margin: 0 auto 20px; }\n  :host /deep/ .gallery-box {\n    display: block;\n    position: relative;\n    margin: 0 auto;\n    max-width: 650px;\n    overflow: hidden; }\n    :host /deep/ .gallery-box .gallery-box-caption {\n      display: block;\n      position: absolute;\n      bottom: 0;\n      width: 100%;\n      height: 100%;\n      text-align: center;\n      color: #fff;\n      opacity: 0;\n      background: rgba(44, 44, 44, 0.8);\n      -webkit-transition: all .35s;\n      transition: all .35s; }\n      :host /deep/ .gallery-box .gallery-box-caption .gallery-box-content {\n        position: absolute;\n        top: 50%;\n        width: 100%;\n        text-align: center;\n        -webkit-transform: translateY(-50%);\n                transform: translateY(-50%); }\n    :host /deep/ .gallery-box:hover .gallery-box-caption {\n      opacity: 1; }\n    :host /deep/ .gallery-box:hover img {\n      -webkit-transform: scale(1.1);\n      transform: scale(1.1); }\n    :host /deep/ .gallery-box img {\n      -webkit-transition: all 300ms ease-in-out;\n      transition: all 300ms ease-in-out; }\n  :host /deep/ .no-gutter > [class*=col-] {\n    padding-right: 0;\n    padding-left: 0; }\n  :host /deep/ .btn {\n    border: 0;\n    border-radius: 290px;\n    font-family: 'Helvetica Neue', Arial, sans-serif; }\n    :host /deep/ .btn.btn-primary {\n      background-color: transparent;\n      border: 1px solid #f0f0f0;\n      -webkit-transition: all .35s;\n      transition: all .35s; }\n      :host /deep/ .btn.btn-primary:hover {\n        opacity: 0.7; }\n  :host /deep/ .btn-xl {\n    padding: 15px 30px;\n    font-size: 20px; }\n  :host /deep/ ::-moz-selection, :host /deep/ ::-moz-selection {\n    text-shadow: none;\n    color: #fff;\n    background: #222; }\n  :host /deep/ ::-moz-selection, :host /deep/ ::selection {\n    text-shadow: none;\n    color: #fff;\n    background: #222; }\n  :host /deep/ img::-moz-selection, :host /deep/ img::-moz-selection {\n    color: #fff;\n    background: 0 0; }\n  :host /deep/ img::selection, :host /deep/ img::-moz-selection {\n    color: #fff;\n    background: 0 0; }\n", ""]);
 
 // exports
 
@@ -290,38 +252,45 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 1266:
+/***/ 1301:
 /***/ (function(module, exports) {
 
-module.exports = "<header app-header>\n  <app-grails-nav class=\"float-xs-right\"></app-grails-nav>\n</header>\n<app-fund></app-fund>\n<footer app-footer></footer>\n"
+module.exports = "<footer>\n  <div class=\"container-fluid\">\n    <div class=\"row\">\n      <div class=\"col-6 col-sm-3 column\">\n        <h4>Information</h4>\n        <ul class=\"list-unstyled\">\n          <li><a pageScroll href=\"#one\">Products</a></li>\n          <li><a pageScroll href=\"#one\">Services</a></li>\n          <li><a pageScroll href=\"#one\">Benefits</a></li>\n          <li><a pageScroll href=\"#one\">Developers</a></li>\n        </ul>\n      </div>\n      <div class=\"col-6 col-sm-3 column\">\n        <h4>About</h4>\n        <ul class=\"list-unstyled\">\n          <li><a pageScroll href=\"#one\">Contact Us</a></li>\n          <li><a pageScroll href=\"#one\">Delivery Information</a></li>\n          <li><a pageScroll href=\"#one\">Privacy Policy</a></li>\n          <li><a pageScroll href=\"#one\">Terms &amp; Conditions</a></li>\n        </ul>\n      </div>\n      <div class=\"col-12 col-sm-3 column\">\n        <h4>Stay Posted</h4>\n        <form>\n          <div class=\"form-group\">\n            <input type=\"text\" class=\"form-control\" title=\"No spam, we promise!\" placeholder=\"Tell us your email\">\n          </div>\n          <div class=\"form-group\">\n            <button class=\"btn btn-primary\" data-toggle=\"modal\" data-target=\"#alertModal\" type=\"button\">Subscribe for updates</button>\n          </div>\n        </form>\n      </div>\n      <div class=\"col-12 col-sm-3 text-right\">\n        <h4>Follow</h4>\n        <ul class=\"list-inline\">\n          <li class=\"list-inline-item\"><a rel=\"nofollow\" href=\"\" title=\"Twitter\"><i class=\"icon-lg ion-social-twitter-outline\"></i></a>&nbsp;</li>\n          <li class=\"list-inline-item\"><a rel=\"nofollow\" href=\"\" title=\"Facebook\"><i class=\"icon-lg ion-social-facebook-outline\"></i></a>&nbsp;</li>\n          <li class=\"list-inline-item\"><a rel=\"nofollow\" href=\"\" title=\"Dribble\"><i class=\"icon-lg ion-social-dribbble-outline\"></i></a></li>\n        </ul>\n      </div>\n    </div>\n    <br/>\n    <span class=\"float-right text-muted small\"><a href=\"https://twitter.com/xmlking\">Made by Sumo</a> ©2015-2017 Company</span>\n  </div>\n</footer>\n"
 
 /***/ }),
 
-/***/ 1267:
+/***/ 1302:
 /***/ (function(module, exports) {
 
-module.exports = "<br/><br/>\n\n<div class=\"container\">\n<!-- Account Balance List Component -->\n<div class=\"row\">\n  <table class=\"table table-striped table-hover table-bordered\">\n    <thead class=\"thead-inverse\">\n    <tr>\n      <th>Accounts</th>\n      <th>Balance</th>\n      <th>Transfer</th>\n    </tr>\n    </thead>\n    <tbody>\n    <tr *ngFor=\"let account of accounts\">\n      <td>{{account.a}} {{account.b}}</td>\n      <td>{{getAccountBalance(account)}}</td>\n      <td>\n        <button type=\"button\" class=\"btn btn-primary\" (click)=\"send(account)\" placement=\"right\"\n                ngbTooltip=\"Transfer 1k Ether\">Fund\n        </button>\n      </td>\n    </tr>\n    </tbody>\n  </table>\n</div>\n\n<!-- Send Ether Component -->\n<div class=\"card\">\n  <div class=\"card-block\">\n    <h3 class=\"card-title\">Transfer Funds</h3>\n    <p class=\"card-text\">Each member account need <strong>Gas</strong> to submit transactions.\n      Administrator can allocatate some <strong>Ethers</strong> from <strong>coinbase</strong> account.</p>\n\n    <form [formGroup]=\"sendEtherForm\" class=\"\">\n      <div class=\"form-group\">\n        <label for=\"recipient_address\">Recipient Address</label>\n        <input type=\"text\" class=\"form-control\" id=\"recipient_address\" formControlName=\"recipientAddress\"\n               placeholder=\"Eg, 0x77d0406c3a2f487c6f32223672a74f0ead8371f1\" required>\n      </div>\n      <div class=\"form-group\">\n        <label for=\"send_amount\">Amount</label>\n        <div class=\"input-group\">\n          <div class=\"input-group-addon\"><i class=\"fa fa-btc\"></i></div>\n          <input type=\"number\" class=\"form-control\" id=\"send_amount\" formControlName=\"sendAmount\"\n                 placeholder=\"Amount\" required>\n          <span class=\"input-group-btn\">\n        <button type=\"submit\" class=\"btn btn-primary\" ngbTooltip=\"Transfer Ethers\"\n                [disabled]=\"!sendEtherForm.valid\"\n                (click)=\"send(sendEtherForm.value.recipientAddress, sendEtherForm.value.sendAmount)\">Send</button>\n        </span>\n        </div>\n      </div>\n    </form>\n\n  </div>\n</div>\n</div>\n\n"
+module.exports = "<nav id=\"topNav\" class=\"navbar fixed-top navbar-toggleable-md navbar-inverse\">\n  <!--[if lt IE 10]>\n  <p class=\"browsehappy\">You are using an <strong>outdated</strong> browser. Please <a\n    href=\"http://browsehappy.com/\">upgrade your browser</a> to improve your experience.</p>\n  <![endif]-->\n    <button (click)=\"isCollapsed = !isCollapsed\" class=\"navbar-toggler navbar-toggler-right hidden-lg-up\" type=\"button\">\n      <span class=\"navbar-toggler-icon\"></span>\n    </button>\n    <a pageScroll class=\"navbar-brand\" routerLink=\"/home\" fragment=\"first\" href=\"#first\"><i class=\"ion-ios-analytics-outline\"></i> {{title}}</a>\n\n    <div class=\"collapse navbar-collapse\" [ngbCollapse]=\"isCollapsed\">\n\n      <div class=\"navbar-nav mr-auto\">\n        <!-- FIXME: https://github.com/angular/angular/issues/13205 -->\n        <!-- <a pageScroll class=\"nav-item nav-link\"  routerLinkActive=\"active\" [routerLinkActiveOptions]=\"{ exact: true }\" routerLink=\"/home\" fragment=\"one\" href=\"#one\">Intro</a>-->\n        <a pageScroll class=\"nav-item nav-link\" routerLink=\"/home\" fragment=\"one\" href=\"#one\" (click)=\"collapseNav()\">Intro</a>\n        <a pageScroll class=\"nav-item nav-link\" routerLink=\"/home\" fragment=\"two\" href=\"#two\" (click)=\"collapseNav()\">Highlights</a>\n        <a pageScroll class=\"nav-item nav-link\" routerLink=\"/home\" fragment=\"three\" href=\"#three\" (click)=\"collapseNav()\">Gallery</a>\n        <a pageScroll class=\"nav-item nav-link\" routerLink=\"/home\" fragment=\"four\" href=\"#four\" (click)=\"collapseNav()\">Features</a>\n        <a pageScroll class=\"nav-item nav-link\" routerLink=\"/home\" fragment=\"last\" href=\"#last\" (click)=\"collapseNav()\">Contact</a>\n      </div>\n\n      <div class=\"navbar-nav\">\n        <a class=\"nav-item nav-link\" (click)=\"openLogin()\">Sign in</a>\n        <a class=\"nav-item nav-link\" (click)=\"openSignup()\">Sign up</a>\n      </div>\n\n      <div class=\"navbar-nav\">\n        <a class=\"nav-item nav-link\" routerLinkActive=\"active\" routerLink=\"/home/blog\" (click)=\"collapseNav()\">Blog</a>\n        <a class=\"nav-item nav-link\" routerLinkActive=\"active\" routerLink=\"/home/about\" (click)=\"collapseNav()\">{{'ABOUT' | translate}}</a>\n      </div>\n\n    </div>\n</nav>\n\n\n"
 
 /***/ }),
 
-/***/ 1268:
+/***/ 1303:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"navbar-nav\">\n  <li class=\"nav-item\" ngbDropdown>\n    <a class=\"nav-link dropdown-toggle\" ngbDropdownToggle>Application Status</a>\n    <div class=\"dropdown-menu\">\n      <a class=\"dropdown-item\">Environment: {{applicationData?.environment}}</a>\n      <a class=\"dropdown-item\">App profile: {{applicationData?.appprofile}}</a>\n      <a class=\"dropdown-item\">App version: {{applicationData?.appversion}}</a>\n      <div class=\"dropdown-divider\"></div>\n      <a class=\"dropdown-item\">Grails version: {{applicationData?.grailsversion}}</a>\n      <a class=\"dropdown-item\">Groovy version: {{applicationData?.groovyversion}}</a>\n      <a class=\"dropdown-item\">JVM version: {{applicationData?.jvmversion}}</a>\n      <div class=\"dropdown-divider\"></div>\n      <a class=\"dropdown-item\">Reloading active: {{applicationData?.reloadingagentenabled}}</a>\n    </div>\n  </li>\n  <li class=\"nav-item\" ngbDropdown>\n    <a class=\"dropdown-toggle nav-link\" ngbDropdownToggle>Artefacts</a>\n    <div class=\"dropdown-menu\">\n      <a class=\"dropdown-item\">Controllers: {{applicationData?.artefacts?.controllers}}</a>\n      <a class=\"dropdown-item\">Domains: {{applicationData?.artefacts?.domains}}</a>\n      <a class=\"dropdown-item\">Services: {{applicationData?.artefacts?.services}}</a>\n    </div>\n  </li>\n\n  <li class=\"nav-item\" ngbDropdown>\n    <a class=\"dropdown-toggle nav-link\" ngbDropdownToggle>Installed Plugins</a>\n    <div class=\"dropdown-menu\">\n      <a class=\"dropdown-item\" *ngFor=\"let plugin of applicationData?.plugins\">{{plugin.name}} -\n        {{plugin.version}}</a>\n    </div>\n  </li>\n</div>\n"
+module.exports = "<app-home-header></app-home-header>\n<router-outlet></router-outlet>\n<app-home-footer></app-home-footer>\n"
 
 /***/ }),
 
-/***/ 926:
+/***/ 1306:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "3.817451bf73804c275d4f.jpg";
+
+/***/ }),
+
+/***/ 948:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_shared_module__ = __webpack_require__(199);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__admin_component__ = __webpack_require__(1182);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components__ = __webpack_require__(1202);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__admin_routing_module__ = __webpack_require__(1198);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AdminModule", function() { return AdminModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_shared_module__ = __webpack_require__(198);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_component__ = __webpack_require__(1203);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components__ = __webpack_require__(1248);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__home_routing_module__ = __webpack_require__(1249);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomeModule", function() { return HomeModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -333,24 +302,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var AdminModule = (function () {
-    function AdminModule() {
+var HomeModule = (function () {
+    function HomeModule() {
     }
-    return AdminModule;
+    return HomeModule;
 }());
-AdminModule = __decorate([
+HomeModule = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
         imports: [
             __WEBPACK_IMPORTED_MODULE_1__shared_shared_module__["a" /* SharedModule */],
-            __WEBPACK_IMPORTED_MODULE_4__admin_routing_module__["a" /* adminRoutes */]
+            __WEBPACK_IMPORTED_MODULE_4__home_routing_module__["a" /* homeRoutes */],
         ],
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__admin_component__["a" /* AdminComponent */]
-        ].concat(__WEBPACK_IMPORTED_MODULE_3__components__["a" /* default */])
+            __WEBPACK_IMPORTED_MODULE_2__home_component__["a" /* HomeComponent */]
+        ].concat(__WEBPACK_IMPORTED_MODULE_3__components__["a" /* default */]),
     })
-], AdminModule);
+], HomeModule);
 
-//# sourceMappingURL=admin.module.js.map
+//# sourceMappingURL=home.module.js.map
 
 /***/ })
 
