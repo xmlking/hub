@@ -13,12 +13,14 @@ brew install yarn
 
 # install typescript
 yarn global add typescript
-yarn global add @angular/cli@latest
+yarn global add @angular/cli
 yarn global add angular-cli-ghpages
 ng set --global packageManager=yarn
+# ts-node optionals. needed for server-side typescript
+yarn global add ts-node
 
 
-# check/maintain 
+# check/maintain
 yarn --version
 yarn global ls
 yarn global bin
@@ -33,13 +35,14 @@ yarn cache clean
 > these steps below are for setting up a new project from the scratch.
 ```bash
 # create a new angular project `hub`
-ng new hub  --ng4 --routing=true --style=scss --skip-install
+ng set --global packageManager=yarn
+ng new hub   --routing=true --style=scss
 cd hub
-yarn
 ```
 
 #### Addons
 ```bash
+yarn add web-animations-js
 yarn add bootstrap@next
 yarn add @ng-bootstrap/ng-bootstrap
 yarn add font-awesome
@@ -85,11 +88,9 @@ ng g module dashboard/doctor lazy --routing   --dry-run
 ng g component dashboard/doctor/components/ActiveUsers --dry-run
 ng g service dashboard/components/Heart-Rate/HeartRate --dry-run
 
-
-
 ng g component doctor/components/charts --skip-import --dry-run
 ng g component doctor/components/pie-grid --skip-import --dry-run
-
+ng g component dashboard/components/Popup --skip-impor --dry-run
 
 # scaffold `about` lazy module with `routes`
 ng g module about lazy --routing   --dry-run
