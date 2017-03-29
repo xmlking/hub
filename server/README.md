@@ -29,6 +29,11 @@ yarn run build
 ```bash
 yarn run start
 ```
+#### Run json-server for testing
+```bash
+yarn run json-server
+```
+
 
 ###Test
 testing tool for **socket.io**
