@@ -7,7 +7,7 @@ import { HeartRateComponent } from './heart-rate/heart-rate.component';
 import { HeartRateDisplayComponent } from './heart-rate/heart-rate-display/heart-rate-display.component';
 import { PieGridComponent } from './pie-grid/pie-grid.component';
 
-export default [
+export const Components = [
   ProfileCardComponent,
   LeaderBoardComponent,
   BalanceHistoryComponent,

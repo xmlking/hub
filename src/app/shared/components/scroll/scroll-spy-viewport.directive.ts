@@ -36,8 +36,8 @@ export class ScrollSpyViewportDirective implements OnInit, OnDestroy, AfterViewI
   };
 
   constructor(private scrollSpyService: ScrollSpyService, elementRef: ElementRef,
-              @Inject(DOCUMENT) private _document: Document, private renderer: Renderer,
-              @Inject(WindowService) private _window: Window) {
+              @Inject(DOCUMENT) private _document: any, private renderer: Renderer,
+              @Inject(WindowService) private _window: any) {
     this.element = elementRef.nativeElement;
   }
 

@@ -18,6 +18,7 @@ export class PieGridComponent implements OnInit {
     domain: ['#5AA454', '#A10A28', '#C7B42C', '#AAAAAA']
   };
   @Input() user: ActiveUser;
+  @Input() gradient: boolean;
   constructor() {
     Object.assign(this, {single, multi});
   }

@@ -12,7 +12,7 @@ export class LandingComponent implements OnInit, OnDestroy {
   // @ViewChild('topNav') topNav: ElementRef;
   isVideoCollapsed: boolean;
 
-  constructor(@Inject(DOCUMENT) private document: Document, private renderer: Renderer, private titleService: Title) {
+  constructor(@Inject(DOCUMENT) private document: any, private renderer: Renderer, private titleService: Title) {
   }
 
   ngOnInit() {

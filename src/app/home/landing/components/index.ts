@@ -1,6 +1,6 @@
 import { CarouselComponent } from './carousel/carousel.component';
 
-export default [
+export const Components = [
   CarouselComponent,
 ];
 

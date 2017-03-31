@@ -15,8 +15,8 @@ import {ScrollSpyModule} from 'ng2-scrollspy';
 import {InMemoryWebApiModule} from 'angular-in-memory-web-api';
 
 /* App */
-import Pipes from './pipes';
-import Components from './components';
+import { Pipes } from './pipes';
+import { Components } from './components';
 import { environment } from '../../environments/environment';
 
 const forSharedModuleDemoEnvOnly: any[] = [];

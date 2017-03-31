@@ -7,5 +7,6 @@ import {Component, Input} from '@angular/core';
 })
 
 export class SpinnerComponent {
+  isVisible: boolean;
   @Input() showSpinner = false;
 }

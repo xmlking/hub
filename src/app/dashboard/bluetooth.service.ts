@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
+import { BrowserWebBluetooth } from '@manekinekko/angular-web-bluetooth';
 
 @Injectable()
 export class BluetoothService {
 
-  private _ble;
+  public _ble: any;
 
   constructor() {
     this._ble = navigator.bluetooth;

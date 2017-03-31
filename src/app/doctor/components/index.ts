@@ -7,7 +7,7 @@ import { NumberCardComponent } from './number-card/number-card.component';
 
 
 
-export default [
+export const Components = [
   ActiveUsersComponent,
   ChartsComponent,
   PieGridComponent,

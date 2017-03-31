@@ -8,7 +8,7 @@ import {SpinnerService} from '../../services/spinner.service';
 })
 export class SpinnerComponent implements AfterViewInit {
   @ViewChild('app-spinner') el: ElementRef;
-  private isVisible: boolean;
+  public isVisible: boolean;
 
   constructor(private Spinner: SpinnerService) {
     this.isVisible = true;

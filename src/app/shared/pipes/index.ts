@@ -1,5 +1,5 @@
 import { HighLightPipe } from './highlight.pipe';
 
-export default [
+export const Pipes = [
   HighLightPipe,
 ];

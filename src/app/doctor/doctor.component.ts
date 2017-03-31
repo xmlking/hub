@@ -47,7 +47,7 @@ export class DoctorComponent implements OnInit, OnDestroy {
   sub4: Rx.Subscription;
   currentUser: ActiveUser;
   activeUsers$: Observable<ActiveUser[]>;
-  constructor(@Inject(DOCUMENT) private document: Document, private renderer: Renderer,
+  constructor(@Inject(DOCUMENT) private document: any, private renderer: Renderer,
               private activeUsersService: ActiveUsersService) {
     this.sub1 = this.ob.subscribe((x) => { this.random1 = x; });
     this.sub2 = this.ob.subscribe((x) => { this.random2 = x; });

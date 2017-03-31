@@ -7,7 +7,7 @@ import { dashboardRoutes } from './dashboard-routing.module';
 import { WebBluetoothModule, BrowserWebBluetooth } from '@manekinekko/angular-web-bluetooth';
 import { BluetoothService } from './bluetooth.service';
 
-import Components from './components';
+import { Components } from './components';
 
 import { EffectsModule } from '@ngrx/effects';
 import { UserEffects } from './user/user.effects';

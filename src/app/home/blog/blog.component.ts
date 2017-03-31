@@ -8,7 +8,7 @@ import {DOCUMENT, Title} from '@angular/platform-browser';
 })
 export class BlogComponent implements OnInit {
 
-  constructor(@Inject(DOCUMENT) private document: Document, private renderer: Renderer, private titleService: Title) {
+  constructor(@Inject(DOCUMENT) private document: any, private renderer: Renderer, private titleService: Title) {
   }
 
   ngOnInit() {

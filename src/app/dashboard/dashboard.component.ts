@@ -10,7 +10,7 @@ import {DOCUMENT} from '@angular/platform-browser';
 
 export class DashboardComponent implements OnInit, OnDestroy {
 
-  constructor(@Inject(DOCUMENT) private document: Document, private renderer: Renderer) {}
+  constructor(@Inject(DOCUMENT) private document: any, private renderer: Renderer) {}
 
   ngOnInit() {
     this.renderer.setElementClass(this.document.body, 'body-padding-3', true);

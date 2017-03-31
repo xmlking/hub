@@ -6,7 +6,7 @@ import { MainLayout } from './layouts/';
 import {  ScrollSpyViewportDirective } from './scroll/scroll-spy-viewport.directive';
 import {SmoothieChartComponent} from './smoothie-chart/smoothie-chart.component';
 
-export default [
+export const Components = [
   HeaderComponent,
   FooterComponent,
   SpinnerComponent,
