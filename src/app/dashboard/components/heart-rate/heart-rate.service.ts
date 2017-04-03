@@ -1,10 +1,6 @@
 import {Injectable} from '@angular/core';
-import {Observable} from 'rxjs/Observable';
-import {Observer} from 'rxjs/Observer';
-import {Subscription} from 'rxjs/Subscription';
-import 'rxjs/add/operator/do';
-import 'rxjs/add/operator/mergeMap';
-import 'rxjs/add/operator/share';
+import {Observable, Subscription, Observer} from 'rxjs/Rx';
+
 
 import { BluetoothCore } from '@manekinekko/angular-web-bluetooth';
 
