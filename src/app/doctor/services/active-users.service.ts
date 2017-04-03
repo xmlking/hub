@@ -9,11 +9,7 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 
 import {environment} from '../../../environments/environment';
-
-export interface ActiveUser {
-  id: number;
-  name: string;
-}
+import {ActiveUser} from "../models/active-user";
 
 @Injectable()
 export class ActiveUsersService {

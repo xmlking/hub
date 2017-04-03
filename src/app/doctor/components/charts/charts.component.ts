@@ -1,5 +1,5 @@
 import {Component, Input, OnChanges} from '@angular/core';
-import {ActiveUser} from '../../services/active-users.service';
+import {ActiveUser} from "../../models/active-user";
 
 @Component({
   selector: 'app-charts',

@@ -1,5 +1,5 @@
 import {ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {ActiveUser} from '../../services/active-users.service';
+import {ActiveUser} from "../../models/active-user";
 
 @Component({
   selector: 'app-active-users',

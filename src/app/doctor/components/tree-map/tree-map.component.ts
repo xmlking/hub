@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { single } from './data';
-import {ActiveUser} from '../../services/active-users.service';
+import {ActiveUser} from "../../models/active-user";
 
 @Component({
   selector: 'app-tree-map',
