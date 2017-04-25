@@ -8,14 +8,19 @@
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "outDir": "dist"
+    "outDir": "dist",
+    "lib" : [
+      "esnext",
+      "dom"
+    ]
+
   },
   "include": [
+    "tasks.ts",
     "src/**/*.ts"
   ],
   "exclude": [
     "dist",
-    "test",
     "node_modules"
   ]
 }

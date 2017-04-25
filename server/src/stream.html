@@ -1,0 +1,30 @@
+<html>
+<head>
+  <script>
+//    var source = new EventSource("http://localhost:3000/api/stream");
+    var source = new EventSource("https://localhost:3000/api/stream/message");
+    source.addEventListener('message', function(e) {
+      console.log('data', JSON.parse(e.data).aaa)
+      if(JSON.parse(e.data).aaa === 0) {
+        console.log('closing')
+        source.close()
+      }
+    }, false);
+
+    source.addEventListener('open', function(e) {
+      console.log('Connection was opened.', e)
+    }, false);
+
+    source.addEventListener('error', function(e) {
+      if (e.readyState === EventSource.CLOSED) {
+        console.log('Connection was closed.');
+      }
+      console.log('error:::', e);
+    }, false);
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>

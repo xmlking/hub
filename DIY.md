@@ -4,12 +4,16 @@ Do-it-yourself guide to setup new Angular app.
 
 ### Install Prerequisites
 ```bash
-# install Node (> 7.6.0) with NVM
-nvm install node 7.6.0
+# install Node (> 7.8.0) with NVM
+nvm install node 7.8.0
 
 # install yarn a better package manager then NPM
 brew update
-brew install yarn
+# brew install yarn
+brew install yarn --ignore-dependencies
+
+#  maintain brew
+brew cleanup
 
 # install typescript
 yarn global add typescript
@@ -18,6 +22,7 @@ yarn global add angular-cli-ghpages
 ng set --global packageManager=yarn
 # ts-node optionals. needed for server-side typescript
 yarn global add ts-node
+
 
 
 # check/maintain
@@ -29,7 +34,10 @@ yarn help cache
 yarn cache ls
 yarn cache dir
 yarn cache clean
+yarn config list
 ```
+
+> Every time you upgrade Yarn version, you have to remove all global modules and re-add them.
 
 ### Project Scaffolding (Optional)
 > these steps below are for setting up a new project from the scratch.
@@ -125,6 +133,14 @@ ng generate module --help
 ```bash
 npm start -- -open
 ```
+
+
+### Using ngrev with Angular CLI
+
+1. Open the Angular’s application directory.
+2. Make sure the dependencies are installed.
+3. Open ngrev.
+4. Click on Select Project and select [YOUR_CLI_APP]/src/tsconfig.app.json.
 
 #### FAQ
 Core, Shared and Feature modules?

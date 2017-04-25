@@ -1,4 +1,4 @@
-import 'reflect-metadata';
+import './polyfills'
 import {useContainer, useKoaServer} from 'routing-controllers';
 import {useContainer as useContainerScoket, useSocketServer} from 'socket-controllers';
 import {Container} from 'typedi';

@@ -1,12 +1,10 @@
 import {Service} from 'typedi';
-import {Controller, Param, Body, Get, Post, Put, Delete, JsonController, Res} from 'routing-controllers';
+import {Controller, Param, Body, Get, Post, Put, Delete, JsonController, Req, Res} from 'routing-controllers';
 import User from '../model/User';
-import {ServerResponse} from 'http';
 
 @Service()
 @JsonController()
 export class TestController {
-
 
   @Get('/users')
   async getAll() {
