@@ -31,12 +31,9 @@ router.get('/stream', async (ctx) => {
     dispatcher.removeListener('message', fn);
   }
 
-
   ctx.response.status = 200;
   ctx.response.type = 'text/event-stream;charset=utf-8';
   ctx.response.set('Cache-Control', 'no-cache');
-
-  console.log( 'ctx.req :', ctx.req)
 
   ctx.body = stream;
 
