@@ -22,7 +22,7 @@ async function* getItemsReallySlowly<T>(items: Iterable<T>): AsyncIterable<T> {
 export class StreamController {
 
   @Post('/send/:topic')
-  post(@Param('topic') topic: string, @Body() data: any) {
+  send(@Param('topic') topic: string, @Body() data: any) {
     console.log('data', data);
     dispatcher.emit(topic, data);
     return {result: 'ok'};
@@ -42,12 +42,12 @@ export class StreamController {
           stream.write(`event: ${event}\n`);
         }
         stream.write(`data: ${JSON.stringify(data)}\n\n`);
-      }
+      };
       const finish = (e) => {
-        console.log('finish...')
+        console.log('finish...');
         // response.res.end()
         dispatcher.removeListener(topic, fn);
-      }
+      };
 
       response.body = stream;
 
@@ -56,7 +56,7 @@ export class StreamController {
 
       request.req.on('close', finish);
       request.req.on('finish', finish);
-      request.req.on('error', finish);
+      request.app.on('error', finish);
     } catch (e) {
       console.log(e)
     }

@@ -68,6 +68,11 @@ yarn add uport-lib
 yarn outdated
 ```
 
+#### Analysis 
+```bash
+yarn add  webpack-bundle-analyzer -D
+```
+
 #### Artifact Scaffolding
 ```bash
 # scaffold `home` module with `routes`
