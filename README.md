@@ -39,7 +39,7 @@ Before running the tests make sure you are serving the app via `ng serve`.
 ## Deploy to gp-pages 
 ```bash 
 # build for gp-pages 
-ng build --env=demo --base-href https://xmlking.github.io/hub/
+ng build --environment=demo --target=production --base-href https://xmlking.github.io/hub/
 # deploy generated `/dist` to gp-pages branch
 ngh
 ```

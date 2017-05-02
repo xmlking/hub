@@ -68,10 +68,13 @@ yarn add uport-lib
 yarn outdated
 ```
 
-#### Analysis 
-```bash
-yarn add  webpack-bundle-analyzer -D
-```
+#### Analysis Tools
+1. webpack-bundle-analyzer - Visualization 
+2. ngrev -  Visualization
+3. Language Service - code check
+4. codelyzer - Style Guide 
+5. ngd - Docs 
+6. Augury - Debug
 
 #### Artifact Scaffolding
 ```bash
