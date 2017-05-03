@@ -75,6 +75,7 @@ yarn outdated
 4. codelyzer - Style Guide 
 5. ngd - Docs 
 6. Augury - Debug
+7. store-devtools - ngrx
 
 #### Artifact Scaffolding
 ```bash
