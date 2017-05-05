@@ -164,3 +164,10 @@ The core module contains providers for global services and can be guarded agains
 
 shared module - This is mostly for convenience where several modules are exported so they can be made available at once in components that want to use them all (common pipes, components, and directives you probably want to use together in many other moduls).
 
+### Issues 
+#### ng e2e
+```bash
+node_modules/.bin/webdriver-manager update --ignore_ssl
+ng e2e -wu false
+```
+

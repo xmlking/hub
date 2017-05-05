@@ -9,6 +9,6 @@ describe('hub App', () => {
 
   it('should display message saying app works', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('app works!');
+    expect<any>(page.getParagraphText()).toEqual('Connection to better health');
   });
 });
