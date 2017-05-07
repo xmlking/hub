@@ -4,15 +4,23 @@
   "description": "Nest TypeScript starter repository",
   "license": "ISC",
   "scripts": {
+    "webpack": "webpack",
+    "test": "ts-node test.ts",
     "start": "node index.js"
   },
   "dependencies": {
-    "nest.js": "*",
-    "rxjs": "^5.3.1",
-    "typescript": "~2.3.2"
+    "nest.js": "^1.0.5",
+    "rxjs": "^5.3.1"
   },
   "devDependencies": {
-    "@types/node": "~7.0.15",
-    "ts-node": "~3.0.4"
+    "@types/jasmine": "^2.5.47",
+    "@types/node": "^7.0.15",
+    "empty-module": "^0.0.2",
+    "jasmine": "^2.6.0",
+    "jasmine-spec-reporter": "^4.0.0",
+    "typescript": "^2.3.2",
+    "ts-loader": "^2.0.3",
+    "ts-node": "^3.0.4",
+    "webpack": "^2.4.1"
   }
 }

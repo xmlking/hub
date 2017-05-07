@@ -11,7 +11,8 @@ module.exports = {
     ],
     extensions: ['.ts', '.js'],
     alias: { // FIXME: Module not found: Error: Can't resolve 'socket.io-client/package' in '/Developer/Work/iot/hub/server2/node_modules/socket.io/lib'
-      "socket.io-client/package": "empty-module"
+      "socket.io-client/package": "empty-module",
+      "hiredis": "empty-module",
     }
   },
 
@@ -26,11 +27,8 @@ module.exports = {
   entry: {
     main: './src/index',
     vendor: [
-      'koa',
-      'routing-controllers',
-      'socket-controllers',
-      'typedi',
-      'express'
+      'nest.js',
+      'rxjs'
     ]
   },
 
