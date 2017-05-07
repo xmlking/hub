@@ -1,5 +1,5 @@
 <ngb-carousel interval="5000" keyboard="true" wrap="true" >
-  <template ngbSlide>
+  <ng-template ngbSlide>
     <img src="http://lorempixel.com/1900/500?r=1" alt="Random first slide">
     <div class="carousel-caption d-none d-md-block text-left">
       <div class="container">
@@ -8,8 +8,8 @@
         <p><a class="btn btn-lg btn-primary" (click)="openSignup()">Sign up today</a></p>
       </div>
     </div>
-  </template>
-  <template ngbSlide>
+  </ng-template>
+  <ng-template ngbSlide>
     <img src="http://lorempixel.com/1900/500?r=2" alt="Random second slide">
     <div class="carousel-caption d-none d-md-block">
       <div class="container">
@@ -18,8 +18,8 @@
         <p><a class="btn btn-lg btn-primary" (click)="openSignup()">Learn more</a></p>
       </div>
     </div>
-  </template>
-  <template ngbSlide>
+  </ng-template>
+  <ng-template ngbSlide>
     <img src="http://lorempixel.com/1900/500?r=3" alt="Random third slide">
     <div class="carousel-caption d-none d-md-block text-right">
       <div class="container">
@@ -28,5 +28,5 @@
         <p><a class="btn btn-lg btn-primary" (click)="openLogin()">Browse gallery</a></p>
       </div>
     </div>
-  </template>
+  </ng-template>
 </ngb-carousel>

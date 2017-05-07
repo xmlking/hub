@@ -27,7 +27,7 @@
     <!--<div class="alert alert-danger" *ngIf="(loginError$ | async)">-->
     <!--<strong>Failed to sign in!</strong> Please check your credentials and try again.-->
     <!--</div>-->
-    <ngb-alert type="danger" *ngIf="(loginError$ | async)" [dismissible]="false">{{loginError$ | async}}</ngb-alert>
+    <ngb-alert type="danger" *ngIf="loginError$ | async as loginError" [dismissible]="false">{{loginError}}</ngb-alert>
   </div>
   <div class="modal-footer">
     <button class="btn btn-warning" type="button" (click)="close('Close click')">Close</button>

@@ -66,7 +66,7 @@
 //  */
 //
 // @Injectable()
-// export class AuthService extends Analytics {
+// export class AuthService implements Analytics {
 //   // Auth0
 //   private lock: any;
 //

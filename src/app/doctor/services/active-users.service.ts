@@ -9,7 +9,7 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 
 import {environment} from '../../../environments/environment';
-import {ActiveUser} from "../models/active-user";
+import {ActiveUser} from '../models/active-user';
 
 @Injectable()
 export class ActiveUsersService {
@@ -62,12 +62,21 @@ export class ActiveUsersService {
       throw new Error('Bad response status: ' + response.status);
     }
     return response.json();
+    // const body = res.json();
+    // return body.data || { };
   }
 
-  private handleError(errorResponse: Response) {
-    let body = errorResponse.json();
-    let message = body.message ? body.message : (errorResponse.statusText || 'unknown error');
-    return Observable.throw(message);
+  private handleError (error: Response | any) {
+    let errMsg: string;
+
+    if (error instanceof Response) {
+      const body = error.json() || '';
+      const err = body.error || JSON.stringify(body);
+      errMsg = `${error.status} - ${error.statusText || ''} ${err}`;
+    } else {
+      errMsg = error.message ? error.message : error.toString();
+    }
+    return Observable.throw(errMsg);
   }
 
   private handleErrorPromise(error: any): Promise<any> {
