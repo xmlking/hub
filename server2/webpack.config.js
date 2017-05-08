@@ -10,8 +10,9 @@ module.exports = {
       path.resolve(__dirname, 'src')
     ],
     extensions: ['.ts', '.js'],
-    alias: { // FIXME: Module not found: Error: Can't resolve 'socket.io-client/package' in '/Developer/Work/iot/hub/server2/node_modules/socket.io/lib'
-      "socket.io-client/package": "empty-module",
+    alias: {
+      // FIXME: Module not found: Error: Can't resolve 'socket.io-client/package' in '/Developer/Work/iot/hub/server2/node_modules/socket.io/lib'
+      // "socket.io-client/package": "empty-module",
       "hiredis": "empty-module",
     }
   },
@@ -44,11 +45,7 @@ module.exports = {
       { test: /\.json$/, loader: 'json-loader' },
       { test: /\.html$/, loader: 'raw-loader' },
       { test: /\.(eot|svg)$/, loader: 'file-loader?name=[name].[hash:20].[ext]' },
-      { test: /\.html$/, loader: 'raw-loader' },
-      { test: /\.html$/, loader: 'raw-loader' },
-      { test: /\.html$/, loader: 'raw-loader' },
-      { test: /\.html$/, loader: 'raw-loader' },
-      { test: /\.html$/, loader: 'raw-loader' },
+      { test: /\.js.map/, loader: 'raw-loader' },
     ]
   },
 
