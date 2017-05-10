@@ -43,6 +43,7 @@ if (environment.demo) {
   );
 }
 
+// import order matters for NgModules
 @NgModule({
   declarations: [
     AppComponent,
