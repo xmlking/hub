@@ -1,4 +1,5 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Inject, OnDestroy, OnInit, Renderer} from '@angular/core';
+import {DOCUMENT} from '@angular/platform-browser';
 import {MaterialService} from './material.service';
 import {ToastyService} from 'ng2-toasty';
 
@@ -8,7 +9,7 @@ import {ToastyService} from 'ng2-toasty';
   styleUrls: ['./material.component.scss'],
   providers: [MaterialService]
 })
-export class MaterialComponent implements OnInit {
+export class MaterialComponent implements OnInit, OnDestroy {
 
   rows = [];
   loadingIndicator = true;
@@ -19,8 +20,10 @@ export class MaterialComponent implements OnInit {
     { name: 'Gender' },
     { name: 'Company' }
   ];
-
-  constructor(private toastyService: ToastyService) {
+  constructor(
+    @Inject(DOCUMENT) private document: any,
+    private renderer: Renderer,
+    private toastyService: ToastyService) {
     this.fetch((data) => {
       this.rows = data;
       setTimeout(() => { this.loadingIndicator = false; }, 1500);
@@ -28,7 +31,11 @@ export class MaterialComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.renderer.setElementClass(this.document.body, 'body-padding-3', true);
     // this.setPage({ offset: 0 });
+  }
+  ngOnDestroy(): void {
+    this.renderer.setElementClass(this.document.body, 'body-padding-3', false);
   }
 
   fetch(cb) {
