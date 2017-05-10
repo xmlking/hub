@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 
 import { SharedModule } from '../shared/shared.module';
-import { DashboardComponent } from './dashboard.component';
 import { dashboardRoutes } from './dashboard-routing.module';
-
 import { WebBluetoothModule, BrowserWebBluetooth } from '@manekinekko/angular-web-bluetooth';
+
 import { BluetoothService } from './bluetooth.service';
 
+import { DashboardComponent } from './dashboard.component';
 import { Components } from './components';
 
 import { EffectsModule } from '@ngrx/effects';
