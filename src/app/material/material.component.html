@@ -1,0 +1,23 @@
+<header app-header></header>
+<br/><br/>
+<br/><br/>
+<div class="container-fluid">
+
+  <ngx-datatable
+    class="material"
+    [rows]="rows"
+    [loadingIndicator]="loadingIndicator"
+    [columns]="columns"
+    [columnMode]="'force'"
+    [headerHeight]="50"
+    [footerHeight]="50"
+    [rowHeight]="'auto'"
+    [limit]="10"
+    [reorderable]="reorderable">
+  </ngx-datatable>
+
+  <button md-button (click)="showMessage()">Click me!</button>
+  <md-slide-toggle>Slide me!</md-slide-toggle>
+</div>
+
+<footer app-footer></footer>

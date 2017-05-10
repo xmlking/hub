@@ -10,6 +10,7 @@ const routes: Routes = [
   { path: 'doctor',      loadChildren: './doctor/doctor.module#DoctorModule' },
   // { path: 'admin',      loadChildren: './admin/admin.module#AdminModule', canActivate: [AuthGuard] },
   { path: 'admin',      loadChildren: './admin/admin.module#AdminModule' },
+  { path: 'material',   loadChildren: './material/material.module#MaterialModule' },
   { path: '404',        loadChildren: './404/404.module#PageNotFoundModule'},
   //
   // 404 should be last

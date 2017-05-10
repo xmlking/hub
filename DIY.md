@@ -97,6 +97,8 @@ ng g component shared/footer --dry-run
 ng g module dashboard lazy --routing   --dry-run
 ng g class dashboard/provider model  --dry-run
 ng g interface dashboard/payer model  --dry-run
+ng g module  material lazy --routing --dry-run
+ng g component material  --dry-run
 ng g component dashboard/components/BalanceHistory --dry-run
 ng g component dashboard/components/HeartRate --dry-run
 ng g service dashboard/components/Battery-Level/BatteryLevel --dry-run
