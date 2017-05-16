@@ -2,6 +2,7 @@
 $dark-primary: mat-palette($mat-blue-grey);
 $dark-accent:  mat-palette($mat-amber, A200, A100, A400);
 $dark-warn:    mat-palette($mat-deep-orange);
+
 $dark-theme:   mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
 
 // Include the alternative theme styles inside of a block with a CSS class. You can make this
@@ -11,4 +12,3 @@ $dark-theme:   mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
   @include angular-material-theme($dark-theme);
 }
 
-// You can also @include the angular-material-theme in separate files and then lazily load them based on an end-user interaction

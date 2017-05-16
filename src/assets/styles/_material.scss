@@ -23,8 +23,11 @@ $candy-app-theme: mat-light-theme($candy-app-primary, $candy-app-accent, $candy-
 // that you are using.
 @include angular-material-theme($candy-app-theme);
 
+// Add all themes
+// You can also @include the angular-material-theme in separate files and then lazily load them based on an end-user interaction
+@import 'themes/unicorn';
 
-@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 // 3rd party
 @import '~@swimlane/ngx-datatable/release/index.css';
 @import '~@swimlane/ngx-datatable/src/themes/material.scss'; // material.scss or dark.scss

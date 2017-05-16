@@ -4,6 +4,7 @@ import { SpinnerComponent } from './spinner/spinner.component';
 import { BackButtonComponent } from './back-button/back-button.component';
 import { MainLayout } from './layouts/';
 import {  ScrollSpyViewportDirective } from './scroll/scroll-spy-viewport.directive';
+import { ParallaxDirective } from './scroll/parallax.directive';
 import {SmoothieChartComponent} from './smoothie-chart/smoothie-chart.component';
 
 export const Components = [
@@ -13,5 +14,6 @@ export const Components = [
   BackButtonComponent,
   MainLayout,
   ScrollSpyViewportDirective,
+  ParallaxDirective,
   SmoothieChartComponent,
 ];

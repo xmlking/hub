@@ -1,19 +1,17 @@
 import {Injectable, NgZone} from '@angular/core';
 import { Http, Headers, Response, URLSearchParams } from '@angular/http';
-
-import { Observable } from 'rxjs/Rx';
+import {Observable} from 'rxjs/Rx';
 import 'rxjs/add/observable/of';
 import 'rxjs/add/operator/toPromise';
 import 'rxjs/add/operator/do';
-import 'rxjs/add/operator/take';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 
 import {environment} from '../../../environments/environment';
-import {ActiveUser} from '../models/active-user';
+import {Account} from '../models/account';
 
 @Injectable()
-export class ActiveUsersService {
+export class MaterialService {
   private accountsUrl = environment.API_BASE_URL + '/accounts';
   private headers = new Headers({
     'Content-Type': 'application/json'
@@ -21,19 +19,19 @@ export class ActiveUsersService {
   constructor(private http: Http, private _ngZone: NgZone) {
   }
 
-  list(): Observable<[ActiveUser]> {
+  list(): Observable<[Account]> {
     return this.http.get(this.accountsUrl)
-      .map(res => this.toJSON(res) as ActiveUser[])
+      .map(res => this.toJSON(res) as Account[])
       .catch(this.handleError);
   }
 
-  get(id: number): Observable<ActiveUser> {
+  get(id: number): Observable<Account> {
     return this.http.get(`${this.accountsUrl}/${id}`)
-      .map(res => this.toJSON(res) as ActiveUser)
+      .map(res => this.toJSON(res) as Account)
       .catch(this.handleError);
   }
 
-  create(name: string): Promise<ActiveUser> {
+  create(name: string): Promise<Account> {
     return this.http
       .post(this.accountsUrl, JSON.stringify({name: name}), {headers: this.headers})
       .toPromise()
@@ -41,12 +39,12 @@ export class ActiveUsersService {
       .catch(this.handleErrorPromise);
   }
 
-  update(user: ActiveUser): Promise<ActiveUser> {
-    const url = `${this.accountsUrl}/${user.id}`;
+  update(account: Account): Promise<Account> {
+    const url = `${this.accountsUrl}/${account.id}`;
     return this.http
-      .put(url, JSON.stringify(user), {headers: this.headers})
+      .put(url, JSON.stringify(account), {headers: this.headers})
       .toPromise()
-      .then(() => user)
+      .then(() => account)
       .catch(this.handleErrorPromise);
   }
 

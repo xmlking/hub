@@ -3,7 +3,7 @@ import {DOCUMENT} from '@angular/platform-browser';
 import * as Rx from 'rxjs/Rx';
 import { ActiveUsersService } from './services/active-users.service';
 import {Observable} from 'rxjs/Observable';
-import {ActiveUser} from "./models/active-user";
+import {ActiveUser} from './models/active-user';
 
 function getRandomNumber(bottom, top): number {
   return Math.floor( Math.random() * ( 1 + top - bottom ) ) + bottom;

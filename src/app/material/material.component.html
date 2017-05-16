@@ -1,22 +1,139 @@
 <header app-header></header>
 <br/><br/>
-<div class="container-fluid">
 
-  <ngx-datatable
-    class="material"
-    [rows]="rows"
-    [loadingIndicator]="loadingIndicator"
-    [columns]="columns"
-    [columnMode]="'force'"
-    [headerHeight]="50"
-    [footerHeight]="50"
-    [rowHeight]="'auto'"
-    [limit]="10"
-    [reorderable]="reorderable">
-  </ngx-datatable>
+<div class="container-fluid" >
 
-  <button md-button (click)="showMessage()">Click me!</button>
-  <md-slide-toggle>Slide me!</md-slide-toggle>
+  <div fxLayout="row">
+    <div fxFlex="100%">
+      <md-toolbar>
+          <span>Tool Bar</span>
+          <span class="example-spacer"></span>
+          <md-icon class="example-icon">favorite</md-icon>
+          <md-icon class="example-icon">delete</md-icon>
+      </md-toolbar>
+    </div>
+  </div>
+  <br/>
+  <div fxLayout="row">
+    <div fxFlex="85%">
+      <ngx-datatable
+        class="material"
+        [rows]="rows$ | async"
+        [loadingIndicator]="loadingIndicator"
+        [columns]="columns"
+        [columnMode]="'force'"
+        [headerHeight]="50"
+        [footerHeight]="50"
+        [rowHeight]="'auto'"
+        [limit]="5"
+        [selected]="selected"
+        [selectionType]="'single'"
+        (select)='onSelect($event)'
+        [reorderable]="true">
+        <ngx-datatable-column name="Name">
+          <ng-template ngx-datatable-cell-template let-value="value" let-row="row">
+        <span
+          title="Double click to edit"
+          (dblclick)="editing[row.$$index + '-name'] = true"
+          *ngIf="!editing[row.$$index + '-name']">
+          {{value}}
+        </span>
+            <input
+              autofocus
+              (blur)="updateValue($event, 'name', value, row)"
+              *ngIf="editing[row.$$index + '-name']"
+              type="text"
+              [value]="value"
+            />
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column name="Gender"></ngx-datatable-column>
+        <ngx-datatable-column name="Age"></ngx-datatable-column>
+        <ngx-datatable-column name="City" prop="address.city"></ngx-datatable-column>
+        <ngx-datatable-column name="State" prop="address.state"></ngx-datatable-column>
+        <ngx-datatable-column name="Actions" sortable="false" prop="id">
+          <ng-template let-column="column" let-sort="sortFn" ngx-datatable-header-template>
+            {{column.name}}
+          </ng-template>
+          <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+            <button md-icon-button (click)="update(row, value)" [disabled]="row['status']==='BLOCKED'">
+              <i class="fa fa-floppy-o"></i>
+            </button>
+            <button md-icon-button (click)="delete(row, value)" [disabled]="row['status']==='APPROVED'">
+              <i class="fa fa-trash"></i>
+            </button>
+          </ng-template>
+        </ngx-datatable-column>
+      </ngx-datatable>
+    </div>
+    <div fxFlex="15%">
+      <h4>Selections</h4>
+      <ul>
+        <li *ngFor='let sel of selected'>
+          {{sel.name}}
+        </li>
+        <li *ngIf="!selected.length">No Selections</li>
+      </ul>
+    </div>
+  </div>
+
+
+
+  <div fxLayout="row">
+    <div fxFlex="100%">
+      <button md-button (click)="showMessage()">Click me!</button>
+      <md-slide-toggle>Slide me!</md-slide-toggle>
+    </div>
+  </div>
+
+  <div fxLayout="row">
+    <div fxFlex="100%">
+      <form class="example-form">
+
+        <table class="example-full-width" cellspacing="0"><tr>
+          <td>
+            <md-input-container class="example-full-width">
+            <input mdInput placeholder="Age">
+          </md-input-container>
+          </td>
+          <td>
+            <!--<md-input-container class="example-full-width">-->
+            <!--<input mdInput placeholder="Long Last Name That Will Be Truncated">-->
+            <div flex>
+              <md-select placeholder="Gender">
+                <md-option value="male">male</md-option>
+                <md-option value="female">Female</md-option>
+              </md-select>
+            </div>
+          <!--</md-input-container>-->
+          </td>
+        </tr></table>
+
+        <md-input-container class="example-full-width">
+          <input mdInput placeholder="Full Name">
+        </md-input-container>
+
+        <p>
+          <md-input-container class="example-full-width">
+            <textarea mdInput placeholder="Address">1600 Amphitheatre Pkwy</textarea>
+          </md-input-container>
+        </p>
+
+        <table class="example-full-width" cellspacing="0"><tr>
+          <td><md-input-container class="example-full-width">
+            <input mdInput placeholder="City">
+          </md-input-container></td>
+          <td><md-input-container class="example-full-width">
+            <input mdInput placeholder="State">
+          </md-input-container></td>
+          <td><md-input-container class="example-full-width">
+            <input mdInput #postalCode maxlength="5" placeholder="Postal Code" value="94043">
+            <md-hint align="end">{{postalCode.value.length}} / 5</md-hint>
+          </md-input-container></td>
+        </tr></table>
+      </form>
+    </div>
+  </div>
 </div>
 
 <footer app-footer></footer>

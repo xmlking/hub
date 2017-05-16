@@ -1,3 +1,20 @@
-:host /deep/ {
-  @import "../../assets/styles/material";
+.example-form {
+  width: 500px;
+}
+
+.example-full-width {
+  width: 100%;
+}
+.example-icon {
+  padding: 0 14px;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+md-select {
+  display: inline-block;
+  margin-top: 2px;
+  width: 100%;
 }

@@ -18,6 +18,7 @@ export interface ScrollSpyViewportOptions {
   fullyInView?: boolean;
 }
 @Directive({
+  // tslint:disable-next-line:directive-selector
   selector: '[scrollSpyViewport]',
 })
 export class ScrollSpyViewportDirective implements OnInit, OnDestroy, AfterViewInit {

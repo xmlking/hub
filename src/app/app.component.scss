@@ -1,0 +1,27 @@
+
+.selected-column {
+  float: right;
+  width: 20%;
+  margin-right: 20px;
+  text-align: left;
+  h4 {
+    text-align: center;
+    margin: 10px 0 0 0;
+    padding: 0;
+  }
+}
+
+ul, li {
+  padding:0;
+  margin:0;
+  list-style:none;
+}
+
+ul {
+  margin: 10px;
+}
+
+li {
+  padding: 3px 5px;
+}
+

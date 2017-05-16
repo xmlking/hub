@@ -62,14 +62,14 @@ if (environment.demo) {
         deps: [Http]
       }
     }),
-    ...forAppModuleDemoEnvOnly,
     AuthModule,
     CoreModule,
     AppRoutingModule,
     StoreModule.provideStore(rootReducer),
     RouterStoreModule.connectRouter(),
     StoreDevtoolsModule.instrumentOnlyWithExtension(),
+    ...forAppModuleDemoEnvOnly,
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

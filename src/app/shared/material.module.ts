@@ -1,9 +1,8 @@
 import {NgModule} from '@angular/core';
 import 'hammerjs';
-// import { FlexLayoutModule } from '@angular/flex-layout';
+import { FlexLayoutModule } from '@angular/flex-layout';
 const material = [
   MdCoreModule,
-  MdCardModule,
   MdListModule,
   MdButtonModule,
   MdButtonToggleModule,
@@ -23,10 +22,10 @@ const material = [
   MdTabsModule,
   MdToolbarModule,
   MdTooltipModule,
+  FlexLayoutModule,
 ]
 import {
   MdCoreModule,
-  MdCardModule,
   MdListModule,
   MdButtonModule,
   MdButtonToggleModule,
