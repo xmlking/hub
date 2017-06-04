@@ -29,7 +29,7 @@ const io = socketIO(server);
 // Use koa server
 useKoaServer(app, {
   routePrefix: '/api',
-  controllerDirs: [__dirname + '/controllers/**/*.ts']
+  controllers: [__dirname + '/controllers/**/*.ts']
 });
 useSocketServer(io, {
   controllers: [__dirname + '/ws-controllers/*.ts']
