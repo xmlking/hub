@@ -4,11 +4,11 @@ API Server and IoT Gateway to send data over WebSocket and store in influxDB.
 
 ###Prerequisites
 ```bash
-# install Node (> 7.6.0) with NVM
-nvm install node 7.6.0
+brew update
+# install Node (>8.0.0)
+brew install node
 
 # install yarn, a better package manager then NPM
-brew update
 brew install yarn
 
 # install typescript
@@ -36,8 +36,12 @@ yarn run json-server
 
 
 ###Test
+
+https://localhost:3000/api/users
+https://localhost:3000/api/posts
+
 testing tool for **socket.io**
 
 http://amritb.github.io/socketio-client-tool/
 
-Connect URL: localhost:3000/iot
+Connect URL: wss://localhost:3000/iot
